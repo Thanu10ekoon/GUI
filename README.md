@@ -7,5 +7,25 @@
 </p>
 <p>(The features outlined here will be subjected to further refinement or modification during the development process of this project.)</p>
 <p> </p>
+
 <p align="center">Tennekoon T.M.T.A.B</p>
 <p align="center">EG/2022/5364</p>
+
+<p align = "center">
+  | 
+<a href="https://github.com/Thanu10ekoon" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/github.svg" alt="your-github-username" height="35" width="45" /></a>
+   ||
+<a href="https://www.linkedin.com/in/thanujaya-tennekoon-b9a155271" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="www.linkedin.com/in/thanujaya-tennekoon-b9a155271" height="35" width="45" /></a>
+   ||
+<a href="https://thanu10ekoon.github.io/web" target="_blank" style="font-size: 30px;">🌐</a>
+    ||
+<a href="https://web.facebook.com/thanu.ten.5" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="facebook.com/thanu.ten.5" height="35" width="45" /></a>
+|
+</p>
+
+
+<p align="center"><a href="https://github.com/Thanu10ekoon">GitHub</a>
+<a href="https://www.linkedin.com/in/thanujaya-tennekoon-b9a155271/">Linkedin</a>
+<a href="https://thanu10ekoon.github.io/web">Web</a>
+<a href="https://web.facebook.com/thanu.ten.5">Facebook</a>
+</p>
