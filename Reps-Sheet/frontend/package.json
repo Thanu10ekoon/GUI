@@ -1,7 +1,7 @@
 {
   "homepage": "https://thanu10ekoon.github.io/GUI",
   
-  "name": "frontend",
+  "name": "GUI",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
