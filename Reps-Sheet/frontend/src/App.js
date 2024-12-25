@@ -1,16 +1,19 @@
-import './App.css';
+import React from 'react'
+import Login from './Login'
+import {BrowserRouter ,Routes, Route} from 'react-router-dom'
+import Signup from './Signup'
+import Home from './Home'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src="./logo192.png" alt="logo" class='logo_m'/>
-        <h1>Reps-Sheet</h1>
-        <h2>Your Daily Workout Diary</h2>
-        <marquee>WEBSITE IS UNDER CONSTRUCTION!</marquee>
-        
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Login/>}></Route>
+        <Route path='/signup' element={<Signup/>}></Route>
+        <Route path='/login' element={<Login/>}></Route>
+        <Route path='/home' element={<Home />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
