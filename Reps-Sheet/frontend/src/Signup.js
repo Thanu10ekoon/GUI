@@ -62,7 +62,7 @@ function Signup()
             </div>
             <button type="submit" className='btn btn-success w-100 rounded-0'><strong>Sign Up</strong></button>
             <p>Agree to T&C</p>
-            <Link to='/login' className='btn btn-default border w-100 bg-light rounded-0 text-decoration-none'><strong>Login</strong></Link>
+            <Link to='/GUI/login' className='btn btn-default border w-100 bg-light rounded-0 text-decoration-none'><strong>Login</strong></Link>
         </form>
       </div>
     </div>

@@ -22,7 +22,7 @@ function Login() {
           .then(res => {
               if(res.data === "Login Success")
               {
-                  navigate('/home');
+                  navigate('/GUI/home');
               }
               else
               {
@@ -56,7 +56,7 @@ function Login() {
             </div>
             <button type='submit' className='btn btn-success w-100 rounded-0'><strong>Login</strong></button>
             <p>Agree to T&C</p>
-            <Link to='/signup' className='btn btn-default border w-100 bg-light rounded-0 text-decoration-none'><strong>Create Account</strong></Link>
+            <Link to='/GUI/signup' className='btn btn-default border w-100 bg-light rounded-0 text-decoration-none'><strong>Create Account</strong></Link>
         </form>
       </div>
     </div>
