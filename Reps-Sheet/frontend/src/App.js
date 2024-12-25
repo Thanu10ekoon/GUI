@@ -7,7 +7,7 @@ function App() {
         <img src="./logo192.png" alt="logo" class='logo_m'/>
         <h1>Reps-Sheet</h1>
         <h2>Your Daily Workout Diary</h2>
-        <marquee>WEBSIRE IS UNDER CONSTRUCTION!</marquee>
+        <marquee>WEBSITE IS UNDER CONSTRUCTION!</marquee>
         
       </header>
     </div>
