@@ -1,218 +1,239 @@
-/* --- Container & Video --- */
+/* Reset default margins/padding */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Container that holds everything */
 .home-container {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
+  /* Let content grow beyond screen height and allow scroll */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /* Don’t force overflow: hidden if we want vertical scroll */
+}
+
+/* The background video that should fill the screen */
+.background-video {
+  /* Make it fixed so it stays while the user scrolls */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* behind all other elements */
+}
+
+/* --- NAVBAR --- */
+.navbar {
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  right: 0;
+  height: 70px;
   
-  /* The background video that fills the screen */
-  .background-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1; /* ensures the video is behind other elements */
-  }
-  
-  /* --- NAVBAR --- */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  backdrop-filter: blur(2px);
+  padding: 0 1.5rem;
+  z-index: 999; /* above any content below */
+}
+
+/* Left side: logo */
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo {
+  height: 60px;
+  width: auto;
+}
+
+/* Right side: links (desktop) */
+.nav-right {
+  display: flex;
+  align-items: center;
+  transition: max-height 0.3s ease;
+  margin-right: 10px;
+}
+
+.nav-right a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 1rem;
+  font-weight: 500;
+}
+
+/* Hamburger menu (hidden on desktop) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+}
+
+/* --- DASHBOARD CONTENT --- */
+.dashboard-content {
+  /* Push content below the 70px navbar */
+  padding-top: 90px;
+  padding-bottom: 2rem;
+  width: 100%;
+  max-width: 1200px; /* or any width you like */
+  margin: 0 auto; /* center horizontally */
+  text-align: center;
+  color: #fff;
+}
+
+/* Headline (e.g., “Welcome, userEmail”) */
+.dashboard-content h2 {
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+/* Common style for forms (Add Workout, Search Form) */
+.form-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  margin: 1rem auto;
+  padding: 1.5rem;
+  width: 300px;          /* narrower form */
+  border-radius: 8px;
+  text-align: left;      /* so labels are aligned left */
+}
+
+.form-container h3 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* We can style labels and inputs to stack nicely */
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-container input {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: none;
+}
+
+.form-container button {
+  padding: 0.6rem 1rem;
+  background-color: #28a745;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.form-container button:hover {
+  background-color: #218838;
+}
+
+/* Workout logs container */
+.workout-logs {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  width: 80%;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.workout-logs h3 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Table styles */
+.workout-logs table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.workout-logs th,
+.workout-logs td {
+  padding: 0.6rem;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  /* Make navbar pinned at the top on mobile, too */
   .navbar {
-    position: absolute; 
-    height: 70px;
-  
-    background-color: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(2px);
-  
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 1.5rem;
-    z-index: 10; /* above the background video */
-  }
-  
-  /* Left side: logo */
-  .nav-left {
-    display: flex;
-    align-items: center;
-  }
-  
-  .nav-logo {
     height: 60px;
-    width: auto;
-  }
-  
-  /* Right side: links (desktop) */
-  .nav-right {
-    display: flex;
-    align-items: center;
-    transition: max-height 0.3s ease;
-    margin-right: 10px;
-  }
-  
-  .nav-right a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 1rem;
-    font-weight: 500;
-  }
-  
-  /* Hamburger menu (hidden on desktop) */
-  .hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-  }
-  
-  .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 4px 0;
-  }
-  
-  /* --- HERO SECTION with translucent overlay --- */
-  .hero-content {
-    /* Make sure the hero content is layered above the video and full-screen */
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
-  
-    /* Optional: some side padding so text doesn’t hit the edges on mobile */
     padding: 0 1rem;
   }
-  
-  /* The overlay box that appears over the hero video (with translucent BG) */
-  .hero-overlay {
-    /* margin-top: 20%; */
-    background-color: rgba(0, 0, 0, 0.4); /* Adjust the opacity to taste */
-    backdrop-filter: blur(2px);
-    padding: 2rem 3rem;
-    border-radius: 8px;
-  
-    /* Limit the overall width, but still scale on mobile */
-    max-width: 600px;
-    width: 90%;
-    margin: 0 auto;
+
+  .nav-logo {
+    height: 50px;
+  }
+
+  /* Hamburger is visible on mobile */
+  .hamburger {
+    display: flex;
+    margin-right: 10px;
+  }
+
+  /* .nav-right as a dropdown menu */
+  .nav-right {
+    position: absolute;
+    top: 60px; /* just below the navbar */
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    background: rgba(0, 0, 0, 0.6);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  .nav-right.open {
+    max-height: 200px;
+  }
+
+  .nav-right a {
+    padding: 1rem;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .dashboard-content h2 {
+    font-size: 1.4rem;
   }
   
-  .hero-overlay h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
+  .form-container {
+    width: 80%;
+    max-width: 400px;
   }
-  
-  .hero-overlay p {
-    font-size: 1.2rem;
-    line-height: 1.5;
-    margin-bottom: 1rem;
-  }
-  
-  /* “Start free” button */
-  .btn-start {
-    display: inline-block;
-    width: auto; /* so it can adapt to text length */
-    padding: 0.75rem 1.5rem;
-    background-color: #28a745;
-    color: #fff;
-    border: none;
-    border-radius: 0.25rem;
-    cursor: pointer;
-    font-weight: bold;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    text-align: center; /* in case the button grows */
-  }
-  
-  .btn-start:hover {
-    background-color: #218838;
-  }
-  
-  /* Small link under the button */
-  .hero-link {
-    display: inline-block;
-    margin-top: 0.5rem;
-    color: #fff;
-    text-decoration: none;
-    border-bottom: 1px solid #fff;
-    transition: color 0.3s ease;
-  }
-  
-  .hero-link:hover {
-    color: #ddd;
-  }
-  
-  /* --- MEDIA QUERIES (Mobile) --- */
-  @media (max-width: 768px) {
-    /* Make navbar pinned at the very top */
-    .navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      margin: 0;
-      height: 60px;
-      background-color: rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(2px);
-      padding: 0 1rem;
-    }
-  
-    .nav-logo {
-      height: 50px;
-    }
-  
-    /* Hamburger is visible on mobile */
-    .hamburger {
-      display: flex;
-      margin-right: 10px;
-    }
-  
-    /* Dropdown for .nav-right becomes 100% wide below the navbar */
-    .nav-right {
-      position: absolute;
-      top: 60px; /* directly below the 60px navbar */
-      left: 0;
-      right: 0;
-  
-      background: rgba(0, 0, 0, 0.4);
-      flex-direction: column;
-      align-items: flex-start;
-  
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease-in-out;
-    }
-  
-    .nav-right.open {
-      max-height: 200px; /* expand to show nav links */
-    }
-  
-    .nav-right a {
-      padding: 1rem;
-      width: 100%;
-      margin-left: 0; /* vertical stack, so no left margin needed */
-    }
-  
-    /* Adjust hero overlay text size for smaller screens */
-    .hero-overlay h1 {
-      font-size: 2rem;
-    }
-  
-    .hero-overlay p {
-      font-size: 1rem;
-    }
-  }
-  
+}

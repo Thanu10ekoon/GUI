@@ -19,10 +19,15 @@ function Login() {
     event.preventDefault();
     setErrors(Validation(values));
 
+    // If no validation errors:
     if (errors.email === '' && errors.password === '') {
       axios.post('http://localhost:8082/login', values)
         .then(res => {
           if (res.data === 'Login Success') {
+            // Save user email to localStorage
+            localStorage.setItem("userEmail", values.email);
+            
+            // Navigate to dashboard
             navigate('/GUI/dashboard');
           } else {
             alert('No Record Found');
@@ -33,7 +38,7 @@ function Login() {
   };
 
   const handleINput = (event) => {
-    setValues(prev => ({ ...prev, [event.target.name]: [event.target.value] }));
+    setValues(prev => ({ ...prev, [event.target.name]: event.target.value }));
   };
 
   return (
