@@ -90,8 +90,8 @@ function Signup() {
               )}
             </div>
 
-            <button type="submit" className="btn-signup">Sign Up</button>
             <p className='p1'>Agree to T&C</p>
+            <button type="submit" className="btn-signup">Sign Up</button>
             
             <Link to="/GUI/login" className="btn-login">
               Login

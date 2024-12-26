@@ -23,7 +23,7 @@ function Login() {
       axios.post('http://localhost:8082/login', values)
         .then(res => {
           if (res.data === 'Login Success') {
-            navigate('/GUI/home');
+            navigate('/GUI/dashboard');
           } else {
             alert('No Record Found');
           }
