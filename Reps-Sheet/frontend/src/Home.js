@@ -30,12 +30,12 @@ function Home() {
           />
         </div>
         <div className={`nav-right ${menuOpen ? "open" : ""}`}>
-          <a href="/GUI/signup" onClick={() => setMenuOpen(false)}>
+          <Link to="/GUI/signup" onClick={() => setMenuOpen(false)}>
             Register
-          </a>
-          <a href="/GUI/login" onClick={() => setMenuOpen(false)}>
+          </Link>
+          <Link to="/GUI/login" onClick={() => setMenuOpen(false)}>
             Sign In
-          </a>
+          </Link>
         </div>
         <div className="hamburger" onClick={toggleMenu}>
           <span className="bar"></span>
