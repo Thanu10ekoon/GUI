@@ -25,7 +25,7 @@ function Signup()
             {
                 axios.post('http://localhost:8082/signup',values)
                 .then(res => {
-                    navigate('/login');
+                    navigate('/GUI/login');
                 })
                 .catch(err => console.log(err));
             }
