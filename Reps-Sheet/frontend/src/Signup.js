@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Validation from './SignupValidation';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
 import './Signup.css';
 
 function Signup() {
@@ -20,7 +19,8 @@ function Signup() {
     const err = Validation(values);
     setErrors(err);
 
-    if (errors.name === '' && errors.email === '' && errors.password === '') {
+    // Only post if no errors
+    if (!err.name && !err.email && !err.password) {
       axios.post('http://localhost:8082/signup', values)
         .then(() => {
           navigate('/GUI/login');
@@ -30,53 +30,74 @@ function Signup() {
   };
 
   const handleINput = (event) => {
-    setValues(prev => ({ ...prev, [event.target.name]: [event.target.value] }));
+    setValues((prev) => ({ 
+      ...prev, 
+      [event.target.name]: event.target.value
+    }));
   };
 
   return (
-    <div className="signup-container">
-      <div className="signup-box">
-        <h2 className="signup-title">Sign-Up</h2>
-        <form onSubmit={handleSubmit}>
-          <div className="form-group">
-            <label htmlFor="name"><strong>Name</strong></label>
-            <input
-              type="text"
-              name="name"
-              placeholder="Enter Name"
-              onChange={handleINput}
-            />
-            {errors.name && <span className="error-text">{errors.name}</span>}
-          </div>
+    <div className="background-video-wrapper">
+      {/* Background video for signup */}
+      <video
+        className="background-video"
+        autoPlay
+        loop
+        muted
+        src={`${process.env.PUBLIC_URL}/resources/sloop.mp4`}
+      />
 
-          <div className="form-group">
-            <label htmlFor="email"><strong>Email address</strong></label>
-            <input
-              type="email"
-              name="email"
-              placeholder="Enter Email"
-              onChange={handleINput}
-            />
-            {errors.email && <span className="error-text">{errors.email}</span>}
-          </div>
+      <div className="signup-container">
+        <div className="signup-box">
+          <h2 className="signup-title">Sign Up</h2>
+          <form onSubmit={handleSubmit}>
+            <div className="form-group">
+              <label htmlFor="name"><strong>Name</strong></label>
+              <input
+                type="text"
+                name="name"
+                placeholder="Enter Name"
+                onChange={handleINput}
+              />
+              {errors.name && (
+                <span className="error-text">{errors.name}</span>
+              )}
+            </div>
 
-          <div className="form-group">
-            <label htmlFor="password"><strong>Password</strong></label>
-            <input
-              type="password"
-              name="password"
-              placeholder="Enter Password"
-              onChange={handleINput}
-            />
-            {errors.password && <span className="error-text">{errors.password}</span>}
-          </div>
+            <div className="form-group">
+              <label htmlFor="email"><strong>Email Address</strong></label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter Email"
+                onChange={handleINput}
+              />
+              {errors.email && (
+                <span className="error-text">{errors.email}</span>
+              )}
+            </div>
 
-          <button type="submit" className="btn-signup">Sign Up</button>
-          <p>Agree to T&C</p>
-          <Link to="/GUI/login" className="btn-login">
-            Login
-          </Link>
-        </form>
+            <div className="form-group">
+              <label htmlFor="password"><strong>Password</strong></label>
+              <input
+                type="password"
+                name="password"
+                placeholder="Enter Password"
+                onChange={handleINput}
+              />
+              {errors.password && (
+                <span className="error-text">{errors.password}</span>
+              )}
+            </div>
+
+            <button type="submit" className="btn-signup">Sign Up</button>
+            <p className='p1'>Agree to T&C</p>
+            
+            <Link to="/GUI/login" className="btn-login">
+              Login
+            </Link>
+          </form>
+        </div>
       </div>
     </div>
   );

@@ -8,23 +8,7 @@
   overflow: hidden;
 }
 
-.btn-start {
-  width: 150px;
-  padding: 0.5rem;
-  background-color: #28a745; /* Similar to Bootstrap success */
-  color: #fff;
-  border: none;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  font-weight: bold;
-  margin-bottom: 0.75rem;
-  text-decoration: none;
-}
-
-.btn-start:hover {
-  background-color: #218838;
-}
-
+/* The background video that fills the screen */
 .background-video {
   position: absolute;
   top: 0;
@@ -32,16 +16,12 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1;
+  z-index: -1; /* ensures the video is behind other elements */
 }
 
-/* 
-  NAVBAR (Desktop default):
-  - Slightly offset from top/left so it's not flush against edges
-  - Translucent background
-*/
+/* --- NAVBAR --- */
 .navbar {
-  position: absolute;
+  position: absolute; 
   height: 70px;
 
   background-color: rgba(0, 0, 0, 0.4);
@@ -51,8 +31,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 1.5rem;
-
-  z-index: 10;
+  z-index: 10; /* above the background video */
 }
 
 /* Left side: logo */
@@ -95,47 +74,79 @@
   margin: 4px 0;
 }
 
-/* --- Hero Section --- */
+/* --- HERO SECTION with translucent overlay --- */
 .hero-content {
-  position: relative;
-  height: 100%;
-  width: 100%;
+  /* Make sure the hero content is layered above the video and full-screen */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: #fff;
+
+  /* Optional: some side padding so text doesn’t hit the edges on mobile */
   padding: 0 1rem;
 }
 
-.hero-content h1 {
+/* The overlay box that appears over the hero video (with translucent BG) */
+.hero-overlay {
+  /* margin-top: 20%; */
+  background-color: rgba(0, 0, 0, 0.4); /* Adjust the opacity to taste */
+  backdrop-filter: blur(2px);
+  padding: 2rem 3rem;
+  border-radius: 8px;
+
+  /* Limit the overall width, but still scale on mobile */
+  max-width: 600px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.hero-overlay h1 {
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 1rem;
 }
 
-.hero-button {
+.hero-overlay p {
   font-size: 1.2rem;
-  padding: 0.75rem 2rem;
-  margin: 1rem 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  background-color: #007bff;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+/* “Start free” button */
+.btn-start {
+  display: inline-block;
+  width: auto; /* so it can adapt to text length */
+  padding: 0.75rem 1.5rem;
+  background-color: #28a745;
   color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-decoration: none;
   transition: background-color 0.3s ease;
+  text-align: center; /* in case the button grows */
 }
 
-.hero-button:hover {
-  background-color: #0056b3;
+.btn-start:hover {
+  background-color: #218838;
 }
 
+/* Small link under the button */
 .hero-link {
   display: inline-block;
+  margin-top: 0.5rem;
   color: #fff;
   text-decoration: none;
-  margin-top: 0.5rem;
   border-bottom: 1px solid #fff;
   transition: color 0.3s ease;
 }
@@ -144,11 +155,7 @@
   color: #ddd;
 }
 
-/* 
-  --- MEDIA QUERIES (Mobile) ---
-  When screen width <= 768px, switch navbar to pinned at top 
-  so the hamburger and dropdown are fully in view.
-*/
+/* --- MEDIA QUERIES (Mobile) --- */
 @media (max-width: 768px) {
   /* Make navbar pinned at the very top */
   .navbar {
@@ -156,15 +163,15 @@
     top: 0;
     left: 0;
     right: 0;
-    margin: 0;               /* remove the desktop offset */
+    margin: 0;
     height: 60px;
     background-color: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(2px);
-    padding: 0 1rem;         /* slightly less horizontal padding for small screens */
+    padding: 0 1rem;
   }
 
   .nav-logo {
-    height: 50px; /* shrink logo a bit for mobile */
+    height: 50px;
   }
 
   /* Hamburger is visible on mobile */
@@ -173,7 +180,7 @@
     margin-right: 10px;
   }
 
-  /* The dropdown for .nav-right becomes 100% wide below the navbar */
+  /* Dropdown for .nav-right becomes 100% wide below the navbar */
   .nav-right {
     position: absolute;
     top: 60px; /* directly below the 60px navbar */
@@ -189,27 +196,22 @@
     transition: max-height 0.3s ease-in-out;
   }
 
+  .nav-right.open {
+    max-height: 200px; /* expand to show nav links */
+  }
+
   .nav-right a {
     padding: 1rem;
     width: 100%;
-    margin-left: 0; /* links stack vertically, no left margin needed */
+    margin-left: 0; /* vertical stack, so no left margin needed */
   }
 
-  /* When .nav-right has the "open" class, expand to show the links */
-  .nav-right.open {
-    max-height: 200px;
-
-  }
-  .nav-right {
-    margin-right: 0px;
-  }
-
-  .hero-content h1 {
+  /* Adjust hero overlay text size for smaller screens */
+  .hero-overlay h1 {
     font-size: 2rem;
   }
 
-  .hero-button {
+  .hero-overlay p {
     font-size: 1rem;
-    padding: 0.5rem 1.5rem;
   }
 }

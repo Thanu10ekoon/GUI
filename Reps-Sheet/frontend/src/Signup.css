@@ -1,97 +1,122 @@
-/* Fullscreen blue background + centering */
+/* Full-window background video wrapper */
+.background-video-wrapper {
+  position: relative; /* Needed to position signup-container over the video */
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;  /* Hide any overflow from the video */
+  margin: 0;
+  padding: 0;
+}
+
+/* The actual video that fills the entire screen behind everything */
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* Ensures video covers background nicely */
+  z-index: -1;        /* Push it behind the signup container */
+}
+
+/* Centering the sign-up box in the middle of the screen */
 .signup-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #28a745; /* Similar to Bootstrap primary */
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* White box in the center */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Make the box translucent via RGBA */
+.signup-box {
+  background-color: rgba(0, 0, 0, 0.6); /* Dark w/ some opacity */
+  padding: 1.5rem;
+  border-radius: 0.3rem;
+  width: 25%;
+  min-width: 320px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Title styling */
+.signup-title {
+  color: azure;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Form spacing */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+/* Label styling */
+.form-group label {
+  color: azure;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.p1{
+  color: azure;
+}
+
+/* Text fields */
+.form-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  outline: none;
+  box-sizing: border-box;
+}
+
+/* Error message in red */
+.error-text {
+  display: block;
+  color: red;
+  margin-top: 0.25rem;
+}
+
+/* Primary signup button */
+.btn-signup {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #28a745; /* Similar to Bootstrap success */
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+
+.btn-signup:hover {
+  background-color: #218838;
+}
+
+/* Secondary (login) button */
+.btn-login {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  padding: 0.5rem;
+  background-color: #f8f9fa; /* Light gray background */
+  color: #000;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-login:hover {
+  background-color: #e2e6ea;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
   .signup-box {
-    background-color: #fff;
-    padding: 1.5rem;
-    border-radius: 0.3rem;
-    width: 25%;
-    min-width: 320px; /* Ensures it's not too narrow on mobile */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    width: 80%;
   }
-  
-  /* Title styling */
-  .signup-title {
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-  
-  /* Form spacing */
-  .form-group {
-    margin-bottom: 1rem;
-  }
-  
-  /* Label styling */
-  .form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-  }
-  
-  /* Text fields */
-  .form-group input {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 0.25rem;
-    outline: none;
-    box-sizing: border-box;
-  }
-  
-  /* Error text in red */
-  .error-text {
-    display: block;
-    color: red;
-    margin-top: 0.25rem;
-  }
-  
-  /* Signup button */
-  .btn-signup {
-    width: 100%;
-    padding: 0.5rem;
-    background-color: #28a745; /* Similar to Bootstrap success */
-    color: #fff;
-    border: none;
-    border-radius: 0.25rem;
-    cursor: pointer;
-    font-weight: bold;
-    margin-bottom: 0.75rem;
-  }
-  
-  .btn-signup:hover {
-    background-color: #218838;
-  }
-  
-  /* Login button (styled as a link, but looks like a button) */
-  .btn-login {
-    width: 100%;
-    display: inline-block;
-    text-align: center;
-    padding: 0.5rem;
-    background-color: #f8f9fa; /* Light gray background */
-    color: #000;
-    border: 1px solid #ccc;
-    border-radius: 0.25rem;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .btn-login:hover {
-    background-color: #e2e6ea;
-  }
-  
-  /* Responsive breakpoints */
-  @media (max-width: 768px) {
-    .signup-box {
-      width: 50%;
-    }
-  }
-  
+}
