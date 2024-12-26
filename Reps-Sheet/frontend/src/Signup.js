@@ -1,73 +1,85 @@
-import React, { useState } from "react"
-import { Link } from "react-router-dom"
-import Validation from "./SignupValidation";
-import axios from "axios"
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import Validation from './SignupValidation';
+import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import './Signup.css';
 
+function Signup() {
+  const [values, setValues] = useState({
+    name: '',
+    email: '',
+    password: ''
+  });
 
-function Signup() 
-{
-    const [values,setValues]=useState({
-        name:'',
-        email:'',
-        password:''
-      })
+  const [errors, setErrors] = useState({});
+  const navigate = useNavigate();
 
-      const navigate = useNavigate();
-    
-      const [errors,setErrors]=useState({})
-    
-      const handleSubmit=(event)=>{
-        event.preventDefault();
-        const err = Validation(values);
-        setErrors(err);
-        if(errors.name === "" && errors.email === "" && errors.password === "")
-            {
-                axios.post('http://localhost:8082/signup',values)
-                .then(res => {
-                    navigate('/GUI/login');
-                })
-                .catch(err => console.log(err));
-            }
-      }
-    
-      const handleINput = (event)=>{
-        setValues(prev => ({...prev,[event.target.name]:[event.target.value]}))
-      }
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const err = Validation(values);
+    setErrors(err);
 
-    return(
-        <div className='d-flex justify-content-center align-items-center bg-primary vh-100'>
-      <div className='bg-white p-3 rounded w-25'>
-        <h2>Sign-Up</h2>
-        <form action="" onSubmit={handleSubmit}>
-        <div className='mb-3'>
-                <label htmlFor="name"><strong>Name</strong></label>
-                <input type="text" placeholder='Enter Name' name="name"
-                onChange={handleINput} className='form-control rounded-0'/>
-                {errors.name && <span class='text-danger'>{errors.name}</span>}
-            </div>
+    if (errors.name === '' && errors.email === '' && errors.password === '') {
+      axios.post('http://localhost:8082/signup', values)
+        .then(() => {
+          navigate('/GUI/login');
+        })
+        .catch(err => console.log(err));
+    }
+  };
 
-            <div className='mb-3'>
-                <label htmlFor="email"><strong>Email address</strong></label>
-                <input type="email" placeholder='Enter Email' name="email"
-                onChange={handleINput} className='form-control rounded-0'/>
-                {errors.email && <span class='text-danger'>{errors.email}</span>}
-            </div>
+  const handleINput = (event) => {
+    setValues(prev => ({ ...prev, [event.target.name]: [event.target.value] }));
+  };
 
-            <div className='mb-3'>
-                <label htmlFor="password"><strong>Password</strong></label>
-                <input type="password" placeholder='Enter Password' name="password"
-                onChange={handleINput} className='form-control rounded-0'/>
-                {errors.password && <span class='text-danger'>{errors.password}</span>}
-            </div>
-            <button type="submit" className='btn btn-success w-100 rounded-0'><strong>Sign Up</strong></button>
-            <p>Agree to T&C</p>
-            <Link to='/GUI/login' className='btn btn-default border w-100 bg-light rounded-0 text-decoration-none'><strong>Login</strong></Link>
+  return (
+    <div className="signup-container">
+      <div className="signup-box">
+        <h2 className="signup-title">Sign-Up</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="name"><strong>Name</strong></label>
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter Name"
+              onChange={handleINput}
+            />
+            {errors.name && <span className="error-text">{errors.name}</span>}
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="email"><strong>Email address</strong></label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter Email"
+              onChange={handleINput}
+            />
+            {errors.email && <span className="error-text">{errors.email}</span>}
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="password"><strong>Password</strong></label>
+            <input
+              type="password"
+              name="password"
+              placeholder="Enter Password"
+              onChange={handleINput}
+            />
+            {errors.password && <span className="error-text">{errors.password}</span>}
+          </div>
+
+          <button type="submit" className="btn-signup">Sign Up</button>
+          <p>Agree to T&C</p>
+          <Link to="/GUI/login" className="btn-login">
+            Login
+          </Link>
         </form>
       </div>
     </div>
-    );
-
+  );
 }
 
 export default Signup;

@@ -1,5 +1,6 @@
 {
   "homepage": "https://thanu10ekoon.github.io/GUI",
+  "homepage2": "http://localhost:3000/GUI",
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
