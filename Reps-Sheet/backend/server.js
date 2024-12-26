@@ -14,7 +14,7 @@ const db = mysql.createConnection({
     database: "signup"
 });
 
-// Existing signup endpoint
+// Signup endpoint (unchanged, still stores name/email/password in `login`)
 app.post('/signup', (req, res) => {
     const sql = "INSERT INTO login (`name`, `email`, `password`) VALUES (?)";
     const values = [
@@ -24,59 +24,59 @@ app.post('/signup', (req, res) => {
     ];
     db.query(sql, [values], (err, data) => {
         if (err) {
+            console.error("Signup Error:", err);
             return res.json("Error");
         }
-        return res.json(data);
+        return res.json("Signup Successful");
     });
 });
 
-// Existing login endpoint
+// Login endpoint (modified to return user’s name)
 app.post('/login', (req, res) => {
     const sql = "SELECT * FROM login WHERE `email` = ? AND `password` = ?";
     db.query(sql, [req.body.email, req.body.password], (err, data) => {
         if (err) {
+            console.error("Login Error:", err);
             return res.json("Error");
         }
         if (data.length > 0) {
-            // Return “Login Success” so the front end can store the user’s email 
-            return res.json("Login Success");
+            // data[0] is the user row we found. We’ll return an object:
+            // { status: "Login Success", name: user’s name from DB }
+            return res.json({ status: "Login Success", name: data[0].name });
         } else {
             return res.json("Invalid Email or Password");
         }
     });
 });
 
-// New endpoint: Add a workout
+// Add a workout (store user’s name, workout, reps, date)
 app.post('/addWorkout', (req, res) => {
-    const { email, workout, reps, workoutDate } = req.body;
-
-    const sql = "INSERT INTO workout (`email`, `workout`, `reps`, `workout_date`) VALUES (?)";
-    const values = [email, workout, reps, workoutDate];
-
+    const { name, workout, reps, workoutDate } = req.body;
+    const sql = "INSERT INTO workout (`name`, `workout`, `reps`, `workout_date`) VALUES (?)";
+    const values = [name, workout, reps, workoutDate];
     db.query(sql, [values], (err, data) => {
         if (err) {
-            console.error(err);
+            console.error("addWorkout Error:", err);
             return res.json("Error");
         }
         return res.json("Workout added successfully!");
     });
 });
 
-// New endpoint: Get workouts by email + date
+// Get workouts for a specific name + date
 app.post('/getWorkouts', (req, res) => {
-    const { email, workoutDate } = req.body;
-
-    const sql = "SELECT * FROM workout WHERE email = ? AND workout_date = ?";
-    db.query(sql, [email, workoutDate], (err, data) => {
+    const { name, workoutDate } = req.body;
+    const sql = "SELECT * FROM workout WHERE `name` = ? AND `workout_date` = ?";
+    db.query(sql, [name, workoutDate], (err, data) => {
         if (err) {
-            console.error(err);
+            console.error("getWorkouts Error:", err);
             return res.json("Error");
         }
-        return res.json(data);  // Return an array of workouts
+        return res.json(data); // an array of workout objects
     });
 });
 
-// Listen
+// Start the server
 app.listen(8082, () => {
     console.log("Listening on port 8082");
 });

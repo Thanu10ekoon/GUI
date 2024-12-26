@@ -1,239 +1,86 @@
-/* Reset default margins/padding */
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow-x: hidden; /* Prevent horizontal scroll */
-  font-family: Arial, sans-serif;
-  box-sizing: border-box;
-}
-
-/* Container that holds everything */
-.home-container {
-  /* Let content grow beyond screen height and allow scroll */
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  /* Don’t force overflow: hidden if we want vertical scroll */
-}
-
-/* The background video that should fill the screen */
-.background-video {
-  /* Make it fixed so it stays while the user scrolls */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1; /* behind all other elements */
-}
-
-/* --- NAVBAR --- */
-.navbar {
-  position: fixed; 
-  top: 0; 
-  left: 0; 
-  right: 0;
-  height: 70px;
-  
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-  backdrop-filter: blur(2px);
-  padding: 0 1.5rem;
-  z-index: 999; /* above any content below */
-}
-
-/* Left side: logo */
-.nav-left {
-  display: flex;
-  align-items: center;
-}
-
-.nav-logo {
-  height: 60px;
-  width: auto;
-}
-
-/* Right side: links (desktop) */
-.nav-right {
-  display: flex;
-  align-items: center;
-  transition: max-height 0.3s ease;
-  margin-right: 10px;
-}
-
-.nav-right a {
-  color: #fff;
-  text-decoration: none;
-  margin-left: 1rem;
-  font-weight: 500;
-}
-
-/* Hamburger menu (hidden on desktop) */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.bar {
-  width: 25px;
-  height: 3px;
-  background-color: #fff;
-  margin: 4px 0;
-}
-
-/* --- DASHBOARD CONTENT --- */
+/* Dashboard content container */
 .dashboard-content {
-  /* Push content below the 70px navbar */
-  padding-top: 90px;
-  padding-bottom: 2rem;
-  width: 100%;
-  max-width: 1200px; /* or any width you like */
-  margin: 0 auto; /* center horizontally */
-  text-align: center;
+  position: relative;
+  z-index: 1; /* above the video */
+  margin-top: 100px; /* push below navbar */
   color: #fff;
+  text-align: center;
+  padding: 2rem;
 }
 
-/* Headline (e.g., “Welcome, userEmail”) */
 .dashboard-content h2 {
-  margin-bottom: 2rem;
-  font-size: 1.8rem;
+  margin-bottom: 1rem;
 }
 
-/* Common style for forms (Add Workout, Search Form) */
-.form-container {
+/* Forms container */
+.workout-form,
+.search-form {
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(2px);
+  padding: 1rem;
   margin: 1rem auto;
-  padding: 1.5rem;
-  width: 300px;          /* narrower form */
+  width: 300px;
   border-radius: 8px;
-  text-align: left;      /* so labels are aligned left */
 }
 
-.form-container h3 {
-  margin-bottom: 1rem;
-  text-align: center;
+.workout-form h3,
+.search-form h3 {
+  margin-bottom: 0.5rem;
 }
 
-/* We can style labels and inputs to stack nicely */
-.form-container form {
+.workout-form form,
+.search-form form {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
-.form-container label {
+.workout-form form label,
+.search-form form label {
   margin-bottom: 0.5rem;
   font-weight: bold;
 }
 
-.form-container input {
+.workout-form input,
+.search-form input {
+  width: 100%;
   margin-bottom: 1rem;
   padding: 0.5rem;
   border-radius: 4px;
   border: none;
 }
 
-.form-container button {
-  padding: 0.6rem 1rem;
+.workout-form button,
+.search-form button {
+  padding: 0.5rem 1rem;
   background-color: #28a745;
   border: none;
   border-radius: 4px;
   color: #fff;
   font-weight: bold;
   cursor: pointer;
-  font-size: 1rem;
 }
 
-.form-container button:hover {
-  background-color: #218838;
-}
-
-/* Workout logs container */
+/* Workout logs table */
 .workout-logs {
+  margin: 2rem auto;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(2px);
   width: 80%;
   max-width: 600px;
-  margin: 2rem auto;
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 8px;
-  text-align: left;
 }
 
-.workout-logs h3 {
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-/* Table styles */
 .workout-logs table {
   width: 100%;
   border-collapse: collapse;
   color: #fff;
-  font-size: 0.95rem;
 }
 
 .workout-logs th,
 .workout-logs td {
-  padding: 0.6rem;
+  padding: 0.5rem;
+  text-align: left;
   border-bottom: 1px solid #ccc;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-  /* Make navbar pinned at the top on mobile, too */
-  .navbar {
-    height: 60px;
-    padding: 0 1rem;
-  }
-
-  .nav-logo {
-    height: 50px;
-  }
-
-  /* Hamburger is visible on mobile */
-  .hamburger {
-    display: flex;
-    margin-right: 10px;
-  }
-
-  /* .nav-right as a dropdown menu */
-  .nav-right {
-    position: absolute;
-    top: 60px; /* just below the navbar */
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    align-items: flex-start;
-    background: rgba(0, 0, 0, 0.6);
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-in-out;
-  }
-
-  .nav-right.open {
-    max-height: 200px;
-  }
-
-  .nav-right a {
-    padding: 1rem;
-    width: 100%;
-    margin-left: 0;
-  }
-
-  .dashboard-content h2 {
-    font-size: 1.4rem;
-  }
-  
-  .form-container {
-    width: 80%;
-    max-width: 400px;
-  }
 }

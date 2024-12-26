@@ -25,26 +25,25 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  /* No background here now, let the video show through */
   margin: 0;
   padding: 0;
 }
 
 /* Make the box translucent via RGBA or HSLA */
 .login-box {
-  background-color: rgba(0, 0, 0, 0.6); /* White w/ 70% opacity */
+  background-color: rgba(0, 0, 0, 0.6); /* darker translucent for more contrast */
   padding: 1.5rem;
   border-radius: 0.3rem;
   width: 25%;
   min-width: 320px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Title styling */
 .login-title {
-  color: azure;
   margin-bottom: 1rem;
   text-align: center;
+  color: #fff; /* White text over dark background */
 }
 
 /* Form spacing */
@@ -54,10 +53,9 @@
 
 /* Label styling */
 .form-group label {
-  color: azure;
-  
   display: block;
   margin-bottom: 0.5rem;
+  color: #fff; /* White label text */
 }
 
 /* Text fields */
@@ -73,15 +71,15 @@
 /* Error message in red */
 .error-text {
   display: block;
-  color: red;
+  color: #ffdddd;
   margin-top: 0.25rem;
 }
 
 /* Buttons */
 .btn-login {
   width: 100%;
-  padding: 0.5rem;
-  background-color: #28a745; /* Similar to Bootstrap success */
+  padding: 0.75rem;
+  background-color: #28a745; /* Similar to Bootstrap success green */
   color: #fff;
   border: none;
   border-radius: 0.25rem;
@@ -98,7 +96,7 @@
   width: 100%;
   display: inline-block;
   text-align: center;
-  padding: 0.5rem;
+  padding: 0.75rem;
   background-color: #f8f9fa; /* Light gray background */
   color: #000;
   border: 1px solid #ccc;

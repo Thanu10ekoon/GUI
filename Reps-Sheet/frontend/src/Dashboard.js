@@ -10,32 +10,27 @@ function Dashboard() {
   const [searchDate, setSearchDate] = useState("");
   const [logs, setLogs] = useState([]);
 
+  const userName = localStorage.getItem("userName");
+
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
-  // Get user email from localStorage
-  const userEmail = localStorage.getItem("userEmail");
-
-  // Add a new workout
   const handleAddWorkout = (e) => {
     e.preventDefault();
-
     if (!workout || !reps || !workoutDate) {
       alert("Please fill all fields");
       return;
     }
-
     axios
       .post("http://localhost:8082/addWorkout", {
-        email: userEmail,
+        name: userName,
         workout,
         reps,
         workoutDate,
       })
       .then((res) => {
         alert(res.data);
-        // Clear fields
         setWorkout("");
         setReps("");
         setWorkoutDate("");
@@ -43,18 +38,15 @@ function Dashboard() {
       .catch((err) => console.log(err));
   };
 
-  // Fetch workouts by date
   const handleGetWorkouts = (e) => {
     e.preventDefault();
-
     if (!searchDate) {
       alert("Please select a date");
       return;
     }
-
     axios
       .post("http://localhost:8082/getWorkouts", {
-        email: userEmail,
+        name: userName,
         workoutDate: searchDate,
       })
       .then((res) => {
@@ -69,6 +61,7 @@ function Dashboard() {
 
   return (
     <div className="home-container">
+      {/* Background video */}
       <video className="background-video" autoPlay muted loop>
         <source
           src={`${process.env.PUBLIC_URL}/resources/dloop.mp4`}
@@ -101,68 +94,67 @@ function Dashboard() {
         </div>
       </nav>
 
-      {/* The main content area */}
+      {/* Main content */}
       <div className="dashboard-content">
-        <h2>Welcome, {userEmail}</h2>
+        <h2>Welcome, {userName}</h2>
 
-        {/* Form to add workout */}
-        <div className="workout-form">
-          <h3>Add Workout</h3>
-          <form onSubmit={handleAddWorkout}>
-            <label>
-              Workout Name:
+        {/*
+          Wrap the two form sections side by side in a flex container.
+          Each form remains within its own "form-container" box.
+        */}
+        <div className="forms-row">
+          {/* Add Workout Form */}
+          <div className="form-container">
+            <h3>Add Workout</h3>
+            <form onSubmit={handleAddWorkout}>
+              <label>Workout Name:</label>
               <input
                 type="text"
+                placeholder="e.g. Crunches"
                 value={workout}
                 onChange={(e) => setWorkout(e.target.value)}
               />
-            </label>
-            <label>
-              Reps:
+              <label>Reps:</label>
               <input
                 type="number"
+                placeholder="e.g. 50"
                 value={reps}
                 onChange={(e) => setReps(e.target.value)}
               />
-            </label>
-            <label>
-              Date:
+              <label>Date:</label>
               <input
                 type="date"
                 value={workoutDate}
                 onChange={(e) => setWorkoutDate(e.target.value)}
               />
-            </label>
-            <button type="submit">Add Workout</button>
-          </form>
-        </div>
+              <button type="submit">Add Workout</button>
+            </form>
+          </div>
 
-        {/* Form to fetch workouts */}
-        <div className="search-form">
-          <h3>View Workouts By Date</h3>
-          <form onSubmit={handleGetWorkouts}>
-            <label>
-              Select Date:
+          {/* View Workouts Form */}
+          <div className="form-container">
+            <h3>View Workouts By Date</h3>
+            <form onSubmit={handleGetWorkouts}>
+              <label>Select Date:</label>
               <input
                 type="date"
                 value={searchDate}
                 onChange={(e) => setSearchDate(e.target.value)}
               />
-            </label>
-            <button type="submit">Get Workouts</button>
-          </form>
+              <button type="submit">Get Workouts</button>
+            </form>
+          </div>
         </div>
 
-        {/* Display fetched workout logs */}
+        {/* Workout Logs Table */}
         <div className="workout-logs">
-          <h3>Workout Logs</h3>
+          <h3>Workout Log</h3>
           {logs.length > 0 ? (
             <table>
               <thead>
                 <tr>
                   <th>Workout</th>
                   <th>Reps</th>
-                  <th>Date</th>
                 </tr>
               </thead>
               <tbody>
@@ -170,7 +162,6 @@ function Dashboard() {
                   <tr key={log.id}>
                     <td>{log.workout}</td>
                     <td>{log.reps}</td>
-                    <td>{log.workout_date}</td>
                   </tr>
                 ))}
               </tbody>
