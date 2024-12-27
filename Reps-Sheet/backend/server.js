@@ -8,14 +8,20 @@ app.use(express.json());
 
 // Database connection
 const db = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "signup"
+    // host: "localhost",
+    // user: "root",
+    // password: "",
+    // database: "signup"
+
+    host: "bp2juxysn0nszxvmkkzj-mysql.services.clever-cloud.com",
+    user: "udflccbdblfustx7",
+    password: "qgnCvYDdKjXJIfaLe8hL",
+    database: "bp2juxysn0nszxvmkkzj",
+    port: 3306
 });
 
 // Signup endpoint (unchanged, still stores name/email/password in `login`)
-app.post('/signup', (req, res) => {
+app.post('/signup', (req, res) => {                                         //replace '/bp2juxysn0nszxvmkkzj' with '/signup'
     const sql = "INSERT INTO login (`name`, `email`, `password`) VALUES (?)";
     const values = [
         req.body.name,
