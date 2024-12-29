@@ -1,43 +1,40 @@
-import React, { useState } from "react";
+// Dashboard.js
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from 'react-router-dom';
 import axios from "axios";
 import "./Dashboard.css";
 
 function Dashboard() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [workout, setWorkout] = useState("");
-  const [reps, setReps] = useState("");
-  const [workoutDate, setWorkoutDate] = useState("");
   const [searchDate, setSearchDate] = useState("");
   const [logs, setLogs] = useState([]);
-
+  
+  // Grab the userName from localStorage
   const userName = localStorage.getItem("userName");
+  
+  const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
+  // Protect this page: redirect to /GUI/login if userName is missing
+  useEffect(() => {
+    if (!userName) {
+      // You can redirect to '/GUI/' (home) or '/GUI/login'
+      navigate("/GUI/login");
+    }
+  }, [userName, navigate]);
+
+  // Toggle the mobile menu
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
-  const handleAddWorkout = (e) => {
-    e.preventDefault();
-    if (!workout || !reps || !workoutDate) {
-      alert("Please fill all fields");
-      return;
-    }
-    axios
-      .post("http://localhost:8082/addWorkout", {
-        name: userName,
-        workout,
-        reps,
-        workoutDate,
-      })
-      .then((res) => {
-        alert(res.data);
-        setWorkout("");
-        setReps("");
-        setWorkoutDate("");
-      })
-      .catch((err) => console.log(err));
+  // Logout handler: remove userName from localStorage and redirect
+  const handleLogout = () => {
+    localStorage.removeItem("userName");
+    // After removing userName, navigate to the home or login page
+    navigate("/GUI/login");
   };
 
+  // Function to handle "Get Workouts"
   const handleGetWorkouts = (e) => {
     e.preventDefault();
     if (!searchDate) {
@@ -60,9 +57,9 @@ function Dashboard() {
   };
 
   return (
-    <div className="home-container">
+    <div className="dhome-container">
       {/* Background video */}
-      <video className="background-video" autoPlay muted loop>
+      <video className="dbackground-video" autoPlay muted loop>
         <source
           src={`${process.env.PUBLIC_URL}/resources/dloop.mp4`}
           type="video/mp4"
@@ -71,104 +68,69 @@ function Dashboard() {
       </video>
 
       {/* Navbar */}
-      <nav className="navbar">
-        <div className="nav-left">
+      <nav className="dnavbar">
+        <div className="dnav-left">
           <img
             src={`${process.env.PUBLIC_URL}/logo192.png`}
             alt="logo"
-            className="nav-logo"
+            className="dnav-logo"
           />
         </div>
-        <div className={`nav-right ${menuOpen ? "open" : ""}`}>
-          <a href="/GUI/signup" onClick={() => setMenuOpen(false)}>
-            Register
-          </a>
-          <a href="/GUI/login" onClick={() => setMenuOpen(false)}>
-            Sign In
-          </a>
+        <div className={`dnav-right ${menuOpen ? "open" : ""}`}>
+          <Link to="/GUI/record" onClick={() => setMenuOpen(false)}>
+            Record Workout
+          </Link>
+          {/* Logout link */}
+          <Link to="/GUI/" onClick={handleLogout}>Logout</Link>
         </div>
-        <div className="hamburger" onClick={toggleMenu}>
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
+        <div className="dhamburger" onClick={toggleMenu}>
+          <span className="dbar"></span>
+          <span className="dbar"></span>
+          <span className="dbar"></span>
         </div>
       </nav>
 
       {/* Main content */}
-      <div className="dashboard-content">
-        <h2>Welcome, {userName}</h2>
+      <div className="ddashboard-content">
+        <div className="dform-container">
+          <h2>Welcome, {userName}</h2>
+          <h3>View Workouts By Date</h3>
+          <form onSubmit={handleGetWorkouts} className="dater">
+            <label className="label1">Select Date:</label>
+            <input
+              type="date"
+              value={searchDate}
+              onChange={(e) => setSearchDate(e.target.value)}
+            />
+            <button type="submit" className="getworkoutbut">
+              Get Workouts
+            </button>
+          </form>
 
-        {/*
-          Wrap the two form sections side by side in a flex container.
-          Each form remains within its own "form-container" box.
-        */}
-        <div className="forms-row">
-          {/* Add Workout Form */}
-          <div className="form-container">
-            <h3>Add Workout</h3>
-            <form onSubmit={handleAddWorkout}>
-              <label>Workout Name:</label>
-              <input
-                type="text"
-                placeholder="e.g. Crunches"
-                value={workout}
-                onChange={(e) => setWorkout(e.target.value)}
-              />
-              <label>Reps:</label>
-              <input
-                type="number"
-                placeholder="e.g. 50"
-                value={reps}
-                onChange={(e) => setReps(e.target.value)}
-              />
-              <label>Date:</label>
-              <input
-                type="date"
-                value={workoutDate}
-                onChange={(e) => setWorkoutDate(e.target.value)}
-              />
-              <button type="submit">Add Workout</button>
-            </form>
-          </div>
-
-          {/* View Workouts Form */}
-          <div className="form-container">
-            <h3>View Workouts By Date</h3>
-            <form onSubmit={handleGetWorkouts}>
-              <label>Select Date:</label>
-              <input
-                type="date"
-                value={searchDate}
-                onChange={(e) => setSearchDate(e.target.value)}
-              />
-              <button type="submit">Get Workouts</button>
-            </form>
-          </div>
-        </div>
-
-        {/* Workout Logs Table */}
-        <div className="workout-logs">
-          <h3>Workout Log</h3>
-          {logs.length > 0 ? (
-            <table>
-              <thead>
-                <tr>
-                  <th>Workout</th>
-                  <th>Reps</th>
-                </tr>
-              </thead>
-              <tbody>
-                {logs.map((log) => (
-                  <tr key={log.id}>
-                    <td>{log.workout}</td>
-                    <td>{log.reps}</td>
+          {/* Workout Logs Table */}
+          <div className="dworkout-logs">
+            <h3>Workout Log</h3>
+            {logs.length > 0 ? (
+              <table>
+                <thead>
+                  <tr>
+                    <th>Workout</th>
+                    <th>Reps</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          ) : (
-            <p>No workout logs to display.</p>
-          )}
+                </thead>
+                <tbody>
+                  {logs.map((log) => (
+                    <tr key={log.id}>
+                      <td>{log.workout}</td>
+                      <td>{log.reps}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            ) : (
+              <p>No workout logs to display.</p>
+            )}
+          </div>
         </div>
       </div>
     </div>

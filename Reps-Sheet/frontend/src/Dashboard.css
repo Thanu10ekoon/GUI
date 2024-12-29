@@ -1,5 +1,7 @@
+/* Dashboard.css */
+
 /* Dashboard content container */
-.dashboard-content {
+.ddashboard-content {
   position: relative;
   z-index: 1; /* above the video */
   margin-top: 100px; /* push below navbar */
@@ -8,41 +10,49 @@
   padding: 2rem;
 }
 
-.dashboard-content h2 {
+.dater
+{
+  text-align: center;
+  padding: 10px;
+  margin-left: 35%;
+  width: 30%;
+}
+
+.getworkoutbut
+{
+  margin-left: 30%;
+}
+
+.ddashboard-content h2 {
   margin-bottom: 1rem;
 }
 
 /* Forms container */
-.workout-form,
-.search-form {
+.dform-container {
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(2px);
   padding: 1rem;
   margin: 1rem auto;
-  width: 300px;
+  width: 70%;
   border-radius: 8px;
 }
 
-.workout-form h3,
-.search-form h3 {
+.dform-container h3 {
   margin-bottom: 0.5rem;
 }
 
-.workout-form form,
-.search-form form {
+.dform-container form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.workout-form form label,
-.search-form form label {
+.dform-container form label {
   margin-bottom: 0.5rem;
   font-weight: bold;
 }
 
-.workout-form input,
-.search-form input {
+.dform-container form input {
   width: 100%;
   margin-bottom: 1rem;
   padding: 0.5rem;
@@ -50,8 +60,7 @@
   border: none;
 }
 
-.workout-form button,
-.search-form button {
+.dform-container form button {
   padding: 0.5rem 1rem;
   background-color: #28a745;
   border: none;
@@ -62,7 +71,7 @@
 }
 
 /* Workout logs table */
-.workout-logs {
+.dworkout-logs {
   margin: 2rem auto;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(2px);
@@ -72,15 +81,117 @@
   border-radius: 8px;
 }
 
-.workout-logs table {
+.dworkout-logs table {
   width: 100%;
   border-collapse: collapse;
   color: #fff;
 }
 
-.workout-logs th,
-.workout-logs td {
+.dworkout-logs th,
+.dworkout-logs td {
   padding: 0.5rem;
   text-align: left;
   border-bottom: 1px solid #ccc;
+}
+
+/* Navbar styles */
+
+.dnavbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  z-index: 2;
+}
+
+.dnav-left {
+  display: flex;
+  align-items: center;
+}
+
+.dnav-logo {
+  height: 40px;
+}
+
+.dnav-right {
+  display: flex;
+  gap: 1rem;
+}
+
+.dnav-right a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.dhamburger {
+  display: none; /* Hide hamburger for simplicity */
+}
+
+.dbar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: #fff;
+  transition: 0.4s;
+}
+
+/* Responsive styles */
+
+@media (max-width: 768px) {
+  .dnav-right {
+    display: none;
+  }
+
+  .getworkoutbut
+  {
+    margin-left: 0;
+  }
+  .dater
+  {
+  margin-left: 0;
+  }
+
+  .dhamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .dnav-right.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: rgba(0,0,0,0.9);
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .dnav-right a {
+    margin: 0.5rem 0;
+  }
+}
+
+/* Background video styles */
+
+.dhome-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.dbackground-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

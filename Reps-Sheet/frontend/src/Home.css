@@ -184,8 +184,8 @@
   .nav-right {
     position: absolute;
     top: 60px; /* directly below the 60px navbar */
-    left: 0;
-    right: 0;
+    left: 0px;
+    right: -11px;
 
     background: rgba(0, 0, 0, 0.4);
     flex-direction: column;
