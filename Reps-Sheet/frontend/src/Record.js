@@ -1,11 +1,16 @@
 // Record.js
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./Record.css";
 
 function Record() {
-  
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    localStorage.removeItem("userName");
+    navigate("/GUI/login");
+  };
+
   const [workout, setWorkout] = useState("");
   const [reps, setReps] = useState("");
   const [workoutDate, setWorkoutDate] = useState("");
@@ -62,8 +67,7 @@ function Record() {
         </div>
         <div className={`rnav-right ${menuOpen ? "open" : ""}`}>
           <Link to="/GUI/dashboard" onClick={() => setMenuOpen(false)}>Dashboard</Link>
-          <Link to="/GUI/signup" onClick={() => setMenuOpen(false)}>Register</Link>
-          <Link to="/GUI/login" onClick={() => setMenuOpen(false)}>Sign In</Link>
+          <Link to="/GUI/" onClick={handleLogout}>Logout</Link>
         </div>
         <div className="rhamburger" onClick={toggleMenu}>
           <span className="rbar"></span>

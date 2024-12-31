@@ -1,35 +1,38 @@
 /***************************************************
- * Dashboard.css – Left/Right Layout
+ * Dashboard.css – Responsive with Scrolling Fix
  **************************************************/
 
 /* Main container behind the video & content */
 .dhome-container {
   position: relative;
-  height: 100vh;
+  height: 100vh; /* Full viewport height */
   width: 100%;
-  overflow: hidden;
+  overflow: hidden; /* Prevent horizontal overflow */
 }
 
 /* Background video styles */
 .dbackground-video {
-  position: absolute;
+  position: fixed; /* Fixed to viewport, not the content */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  z-index: -1; /* Behind other elements */
 }
 
-/* Navbar styles */
+/* NAVBAR */
 .dnavbar {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
+  height: 70px; /* Fixed navbar height */
   background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 0 1.5rem;
   z-index: 2;
 }
 
@@ -49,60 +52,121 @@
   font-weight: bold;
 }
 
+/* Hamburger container */
 .dhamburger {
   display: none;
+  cursor: pointer;
 }
 
+/* The actual bars inside the hamburger */
+.dbar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+}
+
+/* --- Media Query for Mobile --- */
 @media (max-width: 768px) {
-  .dnav-right {
-    display: none;
+  /* Allow scrolling on smaller screens */
+  .dhome-container {
+    height: auto; /* Content-driven height */
+    overflow: visible; /* Allow vertical scrolling */
   }
+
+  /* Navbar adjustments for mobile */
+  .dnavbar {
+    height: 60px;
+    padding: 0 1rem;
+  }
+
+  /* Hamburger menu becomes visible on mobile */
   .dhamburger {
-    display: block;
-  }
-  .dnav-right.open {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 10px;
-    background-color: rgba(0, 0, 0, 0.9);
-    padding: 1rem;
-    border-radius: 8px;
   }
+
+  /* Dropdown menu is initially hidden */
+  .dnav-right {
+    position: absolute;
+    top: 60px; /* Just below the navbar */
+    left: 0;
+    right: -1px;
+    background-color: rgba(0, 0, 0, 0.7);
+    flex-direction: column;
+    align-items: flex-start;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  /* When menu is open, expand it */
+  .dnav-right.open {
+    max-height: 200px;
+  }
+
+  /* Links stacked vertically in the dropdown */
   .dnav-right a {
-    margin: 0.5rem 0;
+    margin: 0.5rem 1rem;
   }
 }
 
-/* Content container (split into left & right) */
+/* --- CONTENT CONTAINER --- */
 .dcontent-container {
   display: flex;
-  height: calc(100vh - 60px); /* Full height minus navbar */
-  margin-top: 60px;
-}
-
-.dleft-container, .dright-container {
-  flex: 1;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin-top: 70px; /* Ensure content starts below the navbar */
   padding: 2rem;
-  overflow-y: auto;
+  min-height: calc(100vh - 70px); /* Desktop */
 }
 
-.dleft-container {
+/* Cards for both sections */
+.dcard {
+  width: 45%;
+  max-width: 500px; /* Limit width on larger screens */
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(5px);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin: 1rem;
+  padding: 2rem;
+  color: #fff;
 }
 
-.dright-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(5px);
+/* Stacking cards on mobile */
+@media (max-width: 768px) {
+  .dcontent-container {
+    margin-top: 60px; /* Adjust for smaller navbar */
+  }
+
+  .dcard {
+    width: 100%;
+    margin: 1rem 0;
+  }
+}
+
+/* Left card styles */
+.dleft-card h2,
+.dleft-card h3 {
+  margin-top: 0;
+  font-weight: 600;
 }
 
 /* Form styles */
-.dform-container input, .dform-container button {
+.dform-container {
+  margin-top: 1rem;
+}
+
+.dform-container label {
+  display: inline-block;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+.dform-container input,
+.dform-container button {
   width: 100%;
   padding: 0.5rem;
   margin-top: 0.5rem;
@@ -117,14 +181,16 @@
   cursor: pointer;
 }
 
-/* Table styles */
+/* Workout log table */
 .dworkout-logs table {
   width: 100%;
   border-collapse: collapse;
   color: #fff;
+  margin-top: 1rem;
 }
 
-.dworkout-logs th, .dworkout-logs td {
+.dworkout-logs th,
+.dworkout-logs td {
   padding: 0.5rem;
   text-align: left;
   border-bottom: 1px solid #ccc;
@@ -132,6 +198,12 @@
 
 /* Chart container */
 .chart-container {
-  width: 100%; /* Full width of the right section */
-  height: 100%; /* Full height of the right section */
+  width: 100%;
+  height: 400px;
+}
+
+@media (max-width: 768px) {
+  .chart-container {
+    height: 300px; /* Reduce chart height on mobile */
+  }
 }

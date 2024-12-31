@@ -15,9 +15,7 @@ const db = mysql.createConnection({
     user: "root",
     password: "",
     database: "reps-sheet"
-
-    // If you want to use Clever Cloud DB instead, comment the above
-    // and uncomment lines below:
+    
     // host: "bp2juxysn0nszxvmkkzj-mysql.services.clever-cloud.com",
     // user: "udflccbdblfustx7",
     // password: "qgnCvYDdKjXJIfaLe8hL",
