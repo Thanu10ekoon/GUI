@@ -8,6 +8,11 @@
   overflow: hidden;
 }
 
+.logo1
+{
+  width: 150px;
+}
+
 /* The background video that fills the screen */
 .background-video {
   position: absolute;

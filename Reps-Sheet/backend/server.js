@@ -1,3 +1,6 @@
+/***************************************************
+ * server.js – Node/Express server with MySQL
+ **************************************************/
 const express = require('express');
 const mysql = require('mysql');
 const cors = require('cors');
@@ -13,6 +16,8 @@ const db = mysql.createConnection({
     password: "",
     database: "reps-sheet"
 
+    // If you want to use Clever Cloud DB instead, comment the above
+    // and uncomment lines below:
     // host: "bp2juxysn0nszxvmkkzj-mysql.services.clever-cloud.com",
     // user: "udflccbdblfustx7",
     // password: "qgnCvYDdKjXJIfaLe8hL",
@@ -20,8 +25,8 @@ const db = mysql.createConnection({
     // port: 3306
 });
 
-// Signup endpoint (unchanged, still stores name/email/password in `login`)
-app.post('/signup', (req, res) => {                                         //replace '/bp2juxysn0nszxvmkkzj' with '/signup'
+// Signup endpoint (stores name/email/password in `login`)
+app.post('/signup', (req, res) => {
     const sql = "INSERT INTO login (`name`, `email`, `password`) VALUES (?)";
     const values = [
         req.body.name,
@@ -37,7 +42,7 @@ app.post('/signup', (req, res) => {                                         //re
     });
 });
 
-// Login endpoint (modified to return user’s name)
+// Login endpoint (returns user’s name if success)
 app.post('/login', (req, res) => {
     const sql = "SELECT * FROM login WHERE `email` = ? AND `password` = ?";
     db.query(sql, [req.body.email, req.body.password], (err, data) => {
@@ -46,8 +51,7 @@ app.post('/login', (req, res) => {
             return res.json("Error");
         }
         if (data.length > 0) {
-            // data[0] is the user row we found. We’ll return an object:
-            // { status: "Login Success", name: user’s name from DB }
+            // Return { status: "Login Success", name: <theUserName> }
             return res.json({ status: "Login Success", name: data[0].name });
         } else {
             return res.json("Invalid Email or Password");
@@ -79,6 +83,36 @@ app.post('/getWorkouts', (req, res) => {
             return res.json("Error");
         }
         return res.json(data); // an array of workout objects
+    });
+});
+
+/**
+ * New endpoint: getWeeklyWorkouts
+ *
+ * Returns total reps per day for the past 7 days (including today),
+ * grouped by day (i.e., each date), for the given user name.
+ */
+app.post('/getWeeklyWorkouts', (req, res) => {
+    const { name } = req.body;
+    
+    // MySQL query to sum reps for each of last 7 days
+    const sql = `
+        SELECT 
+            DATE(workout_date) AS date,
+            SUM(reps) AS totalReps
+        FROM workout
+        WHERE name = ?
+          AND workout_date >= DATE_SUB(CURDATE(), INTERVAL 6 DAY)
+        GROUP BY DATE(workout_date)
+        ORDER BY DATE(workout_date) ASC
+    `;
+    db.query(sql, [name], (err, data) => {
+        if (err) {
+            console.error("getWeeklyWorkouts Error:", err);
+            return res.json("Error");
+        }
+        // data looks like: [ { date: '2024-01-01', totalReps: 50 }, ... ]
+        return res.json(data);
     });
 });
 

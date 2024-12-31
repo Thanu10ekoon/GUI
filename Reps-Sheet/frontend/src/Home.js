@@ -49,6 +49,7 @@ function Home() {
         {/* Translucent box containing text, CTA button, etc. */}
         <div className="hero-overlay">
           <h1>Train Smarter, Get Fitter</h1>
+          <img src={`${process.env.PUBLIC_URL}/logo192.png`} className="logo1" alt="logo"></img>
           <p>
             Reps-Sheet helps you track your workouts, push your limits, 
             and reach your goals faster. Whether you're a beginner or 
