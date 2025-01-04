@@ -132,11 +132,11 @@ function Dashboard() {
 
       <nav className="dnavbar">
         <div className="dnav-left">
-          <img
+        <Link to = "/GUI/"><img
             src={`${process.env.PUBLIC_URL}/logo192.png`}
             alt="logo"
             className="dnav-logo"
-          />
+          /></Link>
         </div>
 
         <div className={`dnav-right ${menuOpen ? "open" : ""}`}>

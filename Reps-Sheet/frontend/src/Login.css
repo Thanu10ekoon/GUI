@@ -25,8 +25,10 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 100vw;
   margin: 0;
   padding: 0;
+  position: relative; /* Prevents breaking logo positioning */
 }
 
 /* Make the box translucent via RGBA or HSLA */
@@ -37,6 +39,8 @@
   width: 25%;
   min-width: 320px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  z-index: 2; /* Ensure the box stays above the video */
 }
 
 /* Title styling */
@@ -75,11 +79,11 @@
   margin-top: 0.25rem;
 }
 
-/* Buttons */
-.btn-login {
+/* Primary Button */
+.Lbtn-login {
   width: 100%;
   padding: 0.75rem;
-  background-color: #28a745; /* Similar to Bootstrap success green */
+  background-color: #28a745;
   color: #fff;
   border: none;
   border-radius: 0.25rem;
@@ -88,16 +92,17 @@
   margin-bottom: 0.75rem;
 }
 
-.btn-login:hover {
+.Lbtn-login:hover {
   background-color: #218838;
 }
 
+/* Secondary Button */
 .btn-create {
   width: 100%;
   display: inline-block;
   text-align: center;
   padding: 0.75rem;
-  background-color: #f8f9fa; /* Light gray background */
+  background-color: #f8f9fa; 
   color: #000;
   border: 1px solid #ccc;
   border-radius: 0.25rem;
@@ -109,9 +114,19 @@
   background-color: #e2e6ea;
 }
 
+/* Logo Styling */
+.snav-logo {
+  height: 70px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10; /* Ensure the logo stays above other elements */
+}
+
 /* Responsive breakpoints */
 @media (max-width: 768px) {
   .login-box {
-    width: 80%;
+      width: 80%;
   }
 }

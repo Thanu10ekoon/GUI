@@ -46,6 +46,13 @@ function Signup() {
         muted
         src={`${process.env.PUBLIC_URL}/resources/sloop.mp4`}
       />
+      <div className>
+              <Link to = "/GUI/"><img
+                  src={`${process.env.PUBLIC_URL}/logo192.png`}
+                  alt="logo"
+                  className="snav-logo"
+                /></Link>
+      </div>
 
       <div className="signup-container">
         <div className="signup-box">
@@ -56,7 +63,7 @@ function Signup() {
               <input
                 type="text"
                 name="name"
-                placeholder="Enter Name"
+                placeholder="Thanujaya"
                 onChange={handleINput}
               />
               {errors.name && (
@@ -69,7 +76,7 @@ function Signup() {
               <input
                 type="email"
                 name="email"
-                placeholder="Enter Email"
+                placeholder="eg245364@engug.ruh.ac.lk"
                 onChange={handleINput}
               />
               {errors.email && (
@@ -82,7 +89,7 @@ function Signup() {
               <input
                 type="password"
                 name="password"
-                placeholder="Enter Password"
+                placeholder="**********"
                 onChange={handleINput}
               />
               {errors.password && (
