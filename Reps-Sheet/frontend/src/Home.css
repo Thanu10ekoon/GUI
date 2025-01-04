@@ -65,6 +65,10 @@
   font-weight: 500;
 }
 
+.nav-right a:hover {
+  color: #28a745;
+}
+
 /* Hamburger menu (hidden on desktop) */
 .hamburger {
   display: none;

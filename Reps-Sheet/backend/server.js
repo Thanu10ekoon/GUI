@@ -71,6 +71,19 @@ app.post('/addWorkout', (req, res) => {
     });
 });
 
+app.post('/deleteWorkout', (req, res) => {
+    const { id } = req.body;
+    const sql = "DELETE FROM workout WHERE id = ?";
+    db.query(sql, [id], (err, data) => {
+      if (err) {
+        console.error("deleteWorkout Error:", err);
+        return res.json("Error");
+      }
+      return res.json("Workout deleted successfully!");
+    });
+  });
+  
+
 // Get workouts for a specific name + date
 app.post('/getWorkouts', (req, res) => {
     const { name, workoutDate } = req.body;
@@ -82,6 +95,20 @@ app.post('/getWorkouts', (req, res) => {
         }
         return res.json(data); // an array of workout objects
     });
+
+    app.post('/updateWorkout', (req, res) => {
+        const { id, workout, reps, workoutDate } = req.body;
+        const sql = "UPDATE workout SET workout = ?, reps = ?, workout_date = ? WHERE id = ?";
+        db.query(sql, [workout, reps, workoutDate, id], (err, result) => {
+            if (err) {
+                console.error("updateWorkout Error:", err);
+                return res.json("Error updating workout.");
+            }
+            return res.json("Workout updated successfully!");
+        });
+    });
+    
+
 });
 
 /**
