@@ -1,6 +1,3 @@
-/***************************************************
- * Dashboard.js – Improved Layout for Left/Right
- **************************************************/
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -17,31 +14,61 @@ import {
   Legend,
 } from "chart.js";
 
+// Register chart components
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
+// Day names
 const dayNames = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
 function Dashboard() {
   const [searchDate, setSearchDate] = useState("");
   const [logs, setLogs] = useState([]);
   const [weekData, setWeekData] = useState([]);
-  const userName = localStorage.getItem("userName");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [profilePic, setProfilePic] = useState(""); // for user’s profile image
+
+  const userName = localStorage.getItem("userName");
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!userName) navigate("/GUI/login");
+    if (!userName) {
+      navigate("/GUI/login");
+      return;
+    }
     fetchWeeklyData();
+    fetchProfileImage();
     // eslint-disable-next-line
   }, []);
 
-  const toggleMenu = () => setMenuOpen(!menuOpen);
+  // --- fetch user’s profile image from /getUserProfile
+  const fetchProfileImage = () => {
+    axios
+      .post("http://localhost:8082/getUserProfile", { username: userName })
+      .then((res) => {
+        if (res.data && res.data.profile_image) {
+          setProfilePic(res.data.profile_image);
+        } else {
+          // If no image, use default
+          setProfilePic(`${process.env.PUBLIC_URL}/resources/pro.png`);
+        }
+      })
+      .catch((err) => {
+        console.error(err);
+        setProfilePic(`${process.env.PUBLIC_URL}/resources/pro.png`);
+      });
+  };
+
+  // Toggle mobile menu
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
   const handleLogout = () => {
     localStorage.removeItem("userName");
     navigate("/GUI/login");
   };
 
+  // Handle fetching workouts for chosen date
   const handleGetWorkouts = (e) => {
     e.preventDefault();
     if (!searchDate) {
@@ -57,6 +84,7 @@ function Dashboard() {
       .catch((err) => console.log(err));
   };
 
+  // Fetch last 7 days of data
   const fetchWeeklyData = () => {
     axios
       .post("http://localhost:8082/getWeeklyWorkouts", { name: userName })
@@ -77,14 +105,14 @@ function Dashboard() {
     Sunday: 0,
   };
 
+  // For each date from DB, figure out which day of week
   weekData.forEach((item) => {
-    const dayIndex = new Date(item.date).getDay();
-    // dayIndex: Sunday = 0, Monday = 1, ...
+    const dayIndex = new Date(item.date).getDay(); 
     const dayName = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][dayIndex];
     dayTotals[dayName] += item.totalReps;
   });
 
-  // Prepare chart data
+  // Chart data config
   const chartData = {
     labels: dayNames,
     datasets: [
@@ -96,6 +124,7 @@ function Dashboard() {
     ],
   };
 
+  // Chart options
   const options = {
     responsive: true,
     maintainAspectRatio: false,
@@ -121,61 +150,76 @@ function Dashboard() {
     },
   };
 
+  const finalProfilePic = profilePic || `${process.env.PUBLIC_URL}/resources/pro.png`;
+
   return (
-    <div className="dhome-container">
-      <video className="dbackground-video" autoPlay muted loop>
+    <div className="pdashboard-container">
+      {/* Background video */}
+      <video className="pdashboard-background-video" autoPlay muted loop>
         <source
           src={`${process.env.PUBLIC_URL}/resources/dloop.mp4`}
           type="video/mp4"
         />
       </video>
 
-      <nav className="dnavbar">
-        <div className="dnav-left">
-        <Link to = "/GUI/"><img
-            src={`${process.env.PUBLIC_URL}/logo192.png`}
-            alt="logo"
-            className="dnav-logo"
-          /></Link>
+      {/* Navbar */}
+      <nav className="pnavbar">
+        <div className="pnav-left">
+          <Link to="/GUI/">
+            <img
+              src={`${process.env.PUBLIC_URL}/logo192.png`}
+              alt="logo"
+              className="pnav-logo"
+            />
+          </Link>
         </div>
 
-        <div className={`dnav-right ${menuOpen ? "open" : ""}`}>
+        {/* Nav links */}
+        <div className={`pnav-right ${menuOpen ? "popen" : ""}`}>
           <Link to="/GUI/record" onClick={() => setMenuOpen(false)}>
             Record Workout
           </Link>
           <Link to="/GUI/" onClick={handleLogout}>
             Logout
           </Link>
+
+          {/* Profile icon */}
+          <Link to="/GUI/profile" onClick={() => setMenuOpen(false)}>
+            <img
+              src={finalProfilePic}
+              alt="profile"
+              className="pnav-profile-pic"
+            />
+          </Link>
         </div>
 
-        <div className="dhamburger" onClick={toggleMenu}>
-          <span className="dbar"></span>
-          <span className="dbar"></span>
-          <span className="dbar"></span>
+        {/* Hamburger icon */}
+        <div className="phamburger" onClick={toggleMenu} style={{ marginRight: "15px" }}>
+          <span className="pbar"></span>
+          <span className="pbar"></span>
+          <span className="pbar"></span>
         </div>
       </nav>
 
-      {/* Main content container with two "cards" */}
-      <div className="dcontent-container">
-        
-
+      {/* Main content container */}
+      <div className="pdashboard-content">
         {/* LEFT CARD */}
-        <div className="dcard dleft-card">
+        <div className="pdashboard-card pdashboard-left-card">
           <h2>Welcome, {userName}</h2>
           <h3>View Workouts By Date</h3>
-          <form onSubmit={handleGetWorkouts} className="dform-container">
+          <form onSubmit={handleGetWorkouts} className="pdate-form">
             <label>Select Date:</label>
             <input
               type="date"
               value={searchDate}
               onChange={(e) => setSearchDate(e.target.value)}
             />
-            <button type="submit" className="getworkoutbut">
+            <button type="submit" className="pbtn-get-workouts">
               Get Workouts
             </button>
           </form>
 
-          <div className="dworkout-logs">
+          <div className="pworkout-logs">
             <h3>Workout Log</h3>
             {logs.length > 0 ? (
               <table>
@@ -200,9 +244,9 @@ function Dashboard() {
           </div>
         </div>
 
-        {/* RIGHT CARD (CHART) */}
-        <div className="dcard">
-          <div className="chart-container">
+        {/* RIGHT CARD */}
+        <div className="pdashboard-card">
+          <div className="pchart-container">
             <Bar data={chartData} options={options} />
           </div>
         </div>

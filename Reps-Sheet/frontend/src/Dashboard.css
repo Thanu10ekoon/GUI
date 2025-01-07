@@ -1,82 +1,109 @@
-/* Main container behind the video & content */
-.dhome-container {
+/***************************************************
+ * Dashboard.css – with “p” prefix
+ **************************************************/
+
+/* Main container + background video */
+.pdashboard-container {
   position: relative;
-  min-height: 100vh; /* Allow content to expand */
-  width: 100%;
-  overflow: auto; /* Enable full page scrolling */
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: auto; /* allow scrolling if content is tall */
 }
 
-/* Background video styles */
-.dbackground-video {
-  position: fixed; /* Fixed to cover the entire viewport */
+.pdashboard-background-video {
+  position: fixed; 
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Cover the full viewport even when scrolled */
-  z-index: -1; /* Behind content */
+  object-fit: cover;
+  z-index: -1; 
 }
 
-/* NAVBAR */
-.dnavbar {
-  position: fixed;
+/* Navbar */
+.pnavbar {
+  position: fixed; 
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
   height: 70px;
+
   background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(2px);
+
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 0 1.5rem;
-  z-index: 2;
+  z-index: 10; 
 }
 
-.dnav-left img {
-  height: 40px;
+.pnav-left {
+  display: flex;
+  align-items: center;
+}
+
+.pnav-logo {
+  height: 50px;
+  width: auto;
   cursor: pointer;
 }
 
-.dnav-right {
+.pnav-right {
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  transition: max-height 0.3s ease;
+  margin-right: 10px;
 }
 
-.dnav-right a {
+.pnav-right a {
   color: #fff;
   text-decoration: none;
-  font-weight: bold;
+  margin-left: 1rem;
+  font-weight: 500;
 }
 
-.dnav-right a:hover {
+.pnav-right a:hover {
   color: #28a745;
 }
 
-/* Hamburger menu for mobile view */
-.dhamburger {
+/* Profile pic in navbar */
+.pnav-profile-pic {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-left: 1rem;
+}
+
+/* Hamburger menu */
+.phamburger {
   display: none;
+  flex-direction: column;
   cursor: pointer;
 }
 
-.dbar {
+.pbar {
   width: 25px;
   height: 3px;
   background-color: #fff;
   margin: 4px 0;
 }
 
-/* Content Container */
-.dcontent-container {
+/* Dashboard content container */
+.pdashboard-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: flex-start;
-  margin-top: 100px; /* To give space for the navbar */
+  margin-top: 70px; 
   padding: 2rem;
 }
 
-/* Cards for both sections */
-.dcard {
+/* Cards */
+.pdashboard-card {
   width: 45%;
   max-width: 500px;
   background-color: rgba(0, 0, 0, 0.5);
@@ -88,35 +115,25 @@
   color: #fff;
 }
 
-/* Workout Card Styling */
-.workout-card {
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  color: #fff;
+/* If you want special styling for the left card */
+.pdashboard-left-card {
+  /* no extra styling here */
 }
 
-.workout-card p {
-  margin: 0.5rem 0;
-}
-
-
-/* Date Picker and Form Container Styling */
-.dform-container {
+/* Form for date selection */
+.pdate-form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   margin-top: 1rem;
 }
 
-.dform-container label {
+.pdate-form label {
   font-weight: bold;
   color: #fff;
 }
 
-.dform-container input[type="date"] {
+.pdate-form input[type="date"] {
   padding: 0.5rem;
   border: none;
   border-radius: 8px;
@@ -128,7 +145,8 @@
   font-weight: bold;
 }
 
-.getworkoutbut {
+/* The button to get workouts */
+.pbtn-get-workouts {
   background-color: #28a745;
   border: none;
   padding: 0.7rem;
@@ -139,54 +157,79 @@
   transition: 0.3s ease;
 }
 
+.pbtn-get-workouts:hover {
+  background-color: #218838;
+}
 
 /* Workout log table */
-.dworkout-logs table {
+.pworkout-logs table {
   width: 100%;
   border-collapse: collapse;
   color: #fff;
   margin-top: 1rem;
 }
 
-.dworkout-logs th,
-.dworkout-logs td {
+.pworkout-logs th,
+.pworkout-logs td {
   padding: 0.5rem;
   text-align: left;
   border-bottom: 1px solid #ccc;
 }
 
 /* Chart container */
-.chart-container {
+.pchart-container {
   width: 100%;
   height: 400px;
 }
 
-
-
-.getworkoutbut:hover {
-  background-color: #218838;
+/* “popen” class for expanded nav on mobile */
+.pnav-right.popen {
+  max-height: 200px; 
 }
 
-/* Chart Container */
-.chart-container {
-  width: 100%;
-  height: 400px;
-}
-
-/* Stacking cards for smaller screens */
+/* --- Mobile responsiveness --- */
 @media (max-width: 768px) {
-  .dcontent-container {
-      flex-direction: column;
+  .pnavbar {
+    height: 60px;
+    padding: 0 1rem;
   }
 
-  .dcard {
-      width: 100%;
-      margin: 1rem 0;
+  .pnav-logo {
+    height: 40px;
   }
-}
 
-/* Restore the default full-page scroll with no card-specific scrollbar */
-.dleft-card {
-  overflow: visible; /* Remove individual card scrolling */
-  max-height: unset;
+  .phamburger {
+    display: flex;
+  }
+
+  .pnav-right {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+
+    background-color: rgba(0, 0, 0, 0.7);
+    flex-direction: column;
+    align-items: flex-start;
+
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  .pnav-right a {
+    padding: 1rem;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .pdashboard-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pdashboard-card {
+    width: 90%;
+    margin: 1rem 0;
+  }
 }
