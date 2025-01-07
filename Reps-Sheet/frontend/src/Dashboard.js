@@ -220,7 +220,7 @@ function Dashboard() {
           </form>
 
           <div className="pworkout-logs">
-            <h3>Workout Log</h3>
+            <h3 className="dh3">Workout Log</h3>
             {logs.length > 0 ? (
               <table>
                 <thead>

@@ -150,6 +150,11 @@
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s ease;
+  margin-bottom: 15px;
+}
+
+.dh3{
+  text-align: center;
 }
 
 .pbtn-get-workouts:hover {
