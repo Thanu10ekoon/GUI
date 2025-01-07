@@ -115,11 +115,6 @@
   color: #fff;
 }
 
-/* If you want special styling for the left card */
-.pdashboard-left-card {
-  /* no extra styling here */
-}
-
 /* Form for date selection */
 .pdate-form {
   display: flex;
