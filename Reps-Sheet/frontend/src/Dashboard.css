@@ -152,9 +152,24 @@
   transition: 0.3s ease;
   margin-bottom: 15px;
 }
+.dh2
+{
+  font-family: fantasy;
+}
 
 .dh3{
+  font-family: fantasy;
   text-align: center;
+  text-shadow: 1px 1px 2px #218838;
+}
+
+.dwelcome
+{
+  margin-top: 6%;
+  margin-bottom: -80px;
+  text-align: center;
+  color: #28a745;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 .pbtn-get-workouts:hover {
@@ -194,6 +209,13 @@
     padding: 0 1rem;
   }
 
+  .dwelcome
+  {
+    margin-top: 20%;
+    margin-bottom: -80px;
+    text-align: center;
+    color: aliceblue;
+  }
   .pnav-logo {
     height: 40px;
   }

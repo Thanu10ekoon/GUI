@@ -134,6 +134,7 @@ button {
   background-color: #dc3545;
   color: white;
   margin-right: 10px;
+  border-radius: 10px;
 }
 
 .rdelete-button:hover {
@@ -152,6 +153,7 @@ button {
 
 /* Edit Button Styling (Now Green and Same as Update Button) */
 .redit-button {
+  border-radius: 10px;
   background-color: #28a745;
   color: white;
   margin-right: 10px;

@@ -136,16 +136,16 @@ function Dashboard() {
       y: {
         grid: { display: false },
         beginAtZero: true,
-        ticks: { color: "#fff" },
+        ticks:{display:false},
       },
     },
     plugins: {
       legend: { display: false },
       title: {
         display: true,
-        text: "Weekly Reps by Day",
+        text: "This Week",
         color: "#fff",
-        font: { size: 16 },
+        font: { size: 30 },
       },
     },
   };
@@ -200,13 +200,14 @@ function Dashboard() {
           <span className="pbar"></span>
         </div>
       </nav>
+      <div className="dwelcome"><h2 className="dh2">Welcome, {userName}</h2></div>
 
       {/* Main content container */}
       <div className="pdashboard-content">
         {/* LEFT CARD */}
         <div className="pdashboard-card pdashboard-left-card">
-          <h2>Welcome, {userName}</h2>
-          <h3>View Workouts By Date</h3>
+          
+          <h3 className="dh3">Workout Log</h3>
           <form onSubmit={handleGetWorkouts} className="pdate-form">
             <label>Select Date:</label>
             <input
@@ -220,7 +221,6 @@ function Dashboard() {
           </form>
 
           <div className="pworkout-logs">
-            <h3 className="dh3">Workout Log</h3>
             {logs.length > 0 ? (
               <table>
                 <thead>
