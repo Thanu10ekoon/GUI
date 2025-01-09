@@ -1,5 +1,7 @@
-<h1>Reps-Sheet</h1>
-<h2>A Website as a Daily Workout Diary</h1>
+<h1 align="center">Reps-Sheet</h1>
+<p align="center"><a href="https://thanu10ekoon.github.io/GUI/" target="blank"><img align="center" src="https://i.ibb.co/DRpL86q/logo192.png" alt="Reps-Sheet Logo" width="150px" /></a>
+<h2>Description</h2></p>
+<h3>A Website as a Daily Workout Diary</h3>
 
 <a align="left" href="https://thanu10ekoon.github.io/GUI/">Reps-Sheet Link</a>
 
@@ -26,8 +28,16 @@
 </p>
 
 
+
 <p align="center"><a href="https://github.com/Thanu10ekoon">GitHub</a>
 <a href="https://www.linkedin.com/in/thanujaya-tennekoon-b9a155271/">Linkedin</a>
 <a href="https://thanu10ekoon.github.io/web">Web</a>
 <a href="https://web.facebook.com/thanu.ten.5">Facebook</a>
 </p>
+<h2>UI Decisions</h2>
+<h3>Color Palette</h3>
+<a href="https://ibb.co/cCmcQhc"><img src="https://i.ibb.co/hZqRVFR/895bd055f3bc4832e1aa46c56ff4e4a4.png" alt="895bd055f3bc4832e1aa46c56ff4e4a4" border="0" width="100px"></a>
+<p>* According to Figma <em>"Green symbolizes growth, renewal, and life itself"</em> . Also, chosen green is both attractive and simple for eyes. So I have chosen Green as my main color</p>
+<p>* Figma also says, <em>"Gray symbolizes neutrality and balance". And gray is low contrast yet it harmonizes with any other color. So I have chosen that color for little parts.</em></p>
+<p>* Then I have chosen black color for text overlays but with transluscent feature. Though pitch black is dull, black delivers modern look in the semi-transparent overlays. So black is also used.</p>
+<p>* Lastly, I have chosen white for most fonts as white quickly takes user's attraction towards that text. Also, <em>"White creates contrast and balance in UI designs while promoting a clean, minimalistic aesthetic" according to Figma.</em> </p>
