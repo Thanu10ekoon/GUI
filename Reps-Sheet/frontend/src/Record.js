@@ -10,8 +10,11 @@ function Record() {
     const [selectedDate, setSelectedDate] = useState(new Date().toISOString().slice(0, 10));
     const [logs, setLogs] = useState([]);
     const [editingWorkout, setEditingWorkout] = useState(null);
+    const [profilePic, setProfilePic] = useState("");
+    const [menuOpen, setMenuOpen] = useState(false);
     const userName = localStorage.getItem("userName");
     const navigate = useNavigate();
+
     const fetchWorkouts = useCallback((date) => {
         axios
             .post("http://localhost:8082/getWorkouts", { name: userName, workoutDate: date })
@@ -20,8 +23,29 @@ function Record() {
     }, [userName]);
 
     useEffect(() => {
+        if (!userName) {
+            navigate("/GUI/login");
+            return;
+        }
         fetchWorkouts(selectedDate);
-    }, [selectedDate, fetchWorkouts]);
+        fetchProfileImage();
+    }, [selectedDate, fetchWorkouts, userName, navigate]);
+
+    const fetchProfileImage = () => {
+        axios
+            .post("http://localhost:8082/getUserProfile", { username: userName })
+            .then((res) => {
+                if (res.data && res.data.profile_image) {
+                    setProfilePic(res.data.profile_image);
+                } else {
+                    setProfilePic(`${process.env.PUBLIC_URL}/resources/pro.png`);
+                }
+            })
+            .catch((err) => {
+                console.error(err);
+                setProfilePic(`${process.env.PUBLIC_URL}/resources/pro.png`);
+            });
+    };
 
     const handleLogout = () => {
         localStorage.removeItem("userName");
@@ -89,6 +113,10 @@ function Record() {
         setEditingWorkout(null);
     };
 
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
+
     return (
         <div className="rhome-container">
             {/* Background Video */}
@@ -101,43 +129,39 @@ function Record() {
                 <div className="rnav-left">
                     <img src={`${process.env.PUBLIC_URL}/logo192.png`} alt="logo" className="rnav-logo" />
                 </div>
-                <div className="rnav-right">
+                <div className={`rnav-right ${menuOpen ? "rnav-open" : ""}`}>
                     <Link to="/GUI/dashboard">Dashboard</Link>
                     <Link to="/GUI/" onClick={handleLogout}>Logout</Link>
+                    <Link to="/GUI/profile">
+                        <img src={profilePic} alt="profile" className="rnav-profile-pic" />
+                    </Link>
+                </div>
+                <div className="rhamburger" onClick={toggleMenu}>
+                    <span className="rbar"></span>
+                    <span className="rbar"></span>
+                    <span className="rbar"></span>
                 </div>
             </nav>
 
             {/* Main Content Section */}
             <div className="rcontent-container">
-
                 {/* Left Card - Workout Log with Date Picker and Delete/Edit */}
                 <div className="rform-container">
-                    <h3>Change Log</h3>
+                    <h3 className="rh3">Change Log</h3>
                     <label>Select Date:</label>
                     <input
                         type="date"
                         value={selectedDate}
                         onChange={(e) => setSelectedDate(e.target.value)}
                     />
-
                     <div className="rworkout-list-container">
                         {logs.length > 0 ? (
                             logs.map((log) => (
                                 <div key={log.id} className="rworkout-card">
                                     <p><strong>Workout:</strong> {log.workout}</p>
                                     <p><strong>Reps:</strong> {log.reps}</p>
-                                    <button
-                                        onClick={() => handleEditWorkout(log)}
-                                        className="redit-button"
-                                    >
-                                        Edit
-                                    </button>
-                                    <button
-                                        onClick={() => handleDeleteWorkout(log.id)}
-                                        className="rdelete-button"
-                                    >
-                                        Delete
-                                    </button>
+                                    <button onClick={() => handleEditWorkout(log)} className="redit-button">Edit</button>
+                                    <button onClick={() => handleDeleteWorkout(log.id)} className="rdelete-button">Delete</button>
                                 </div>
                             ))
                         ) : (
@@ -148,7 +172,7 @@ function Record() {
 
                 {/* Right Card - Add or Update Workout Form */}
                 <div className="rform-container">
-                    <h3>{editingWorkout ? "Update Workout" : "Add Workout"}</h3>
+                    <h3 className="rh3">{editingWorkout ? "Update Workout" : "Add New Workout"}</h3>
                     <form onSubmit={handleAddWorkout}>
                         <input
                             type="text"

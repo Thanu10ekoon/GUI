@@ -1,13 +1,11 @@
-/* Main container for the entire page */
 .rhome-container {
   position: relative;
   min-height: 100vh;
   width: 100%;
-  overflow-y: auto; /* Enable full page scrolling */
+  overflow-y: auto;
   font-family: Arial, sans-serif;
 }
 
-/* Background video styling */
 .rbackground-video {
   position: fixed;
   top: 0;
@@ -18,7 +16,6 @@
   z-index: -1;
 }
 
-/* NAVBAR Styling */
 .rnavbar {
   position: fixed;
   top: 0;
@@ -41,6 +38,7 @@
 .rnav-right {
   display: flex;
   gap: 1rem;
+  align-items: center;
 }
 
 .rnav-right a {
@@ -54,7 +52,28 @@
   color: #28a745;
 }
 
-/* Content Container for Left and Right Cards */
+.rnav-profile-pic {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-left: 1rem;
+}
+
+.rhamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.rbar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+}
+
 .rcontent-container {
   display: flex;
   justify-content: space-evenly;
@@ -64,7 +83,6 @@
   flex-wrap: wrap;
 }
 
-/* Styling for Both Cards */
 .rform-container {
   width: 45%;
   max-width: 500px;
@@ -77,14 +95,20 @@
   text-align: left;
 }
 
-/* Left Card Specific Styling */
 .rform-container label {
   font-weight: bold;
   display: block;
   margin-bottom: 10px;
 }
 
-/* Date Picker Styling */
+.rh3
+{
+  font-family: fantasy;
+  text-align: center;
+  text-shadow: 1px 1px 2px darkgreen;
+  padding-bottom: 20px;
+}
+
 input[type="date"] {
   padding: 0.8rem;
   border-radius: 8px;
@@ -98,12 +122,10 @@ input[type="date"] {
   margin-bottom: 1rem;
 }
 
-/* Workout List Container for Proper Spacing */
 .rworkout-list-container {
   margin-top: 1rem;
 }
 
-/* Workout Cards Styling */
 .rworkout-card {
   background-color: rgba(255, 255, 255, 0.1);
   padding: 1rem;
@@ -118,7 +140,6 @@ input[type="date"] {
   font-size: 1rem;
 }
 
-/* Styling for Buttons */
 button {
   padding: 0.8rem;
   border: none;
@@ -129,7 +150,6 @@ button {
   font-weight: bold;
 }
 
-/* Delete Button Styling */
 .rdelete-button {
   background-color: #dc3545;
   color: white;
@@ -141,17 +161,6 @@ button {
   background-color: #c82333;
 }
 
-/* Update Button Styling */
-.rupdate-button {
-  background-color: #007bff;
-  color: white;
-}
-
-.rupdate-button:hover {
-  background-color: #0056b3;
-}
-
-/* Edit Button Styling (Now Green and Same as Update Button) */
 .redit-button {
   border-radius: 10px;
   background-color: #28a745;
@@ -200,14 +209,37 @@ button {
 
 /* Mobile Responsive Adjustments */
 @media (max-width: 768px) {
+  .rhamburger {
+    display: flex;
+  }
+
+  .rnav-right {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+
+    background-color: rgba(0, 0, 0, 0.7);
+    flex-direction: column;
+    align-items: flex-start;
+
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  .rnav-right.rnav-open {
+    max-height: 200px; /* Expand on click */
+  }
+
   .rcontent-container {
-      flex-direction: column;
-      padding: 1rem;
+    flex-direction: column;
+    padding: 1rem;
   }
 
   .rform-container {
-      width: 100%;
-      margin-bottom: 2rem;
+    width: 100%;
+    margin-bottom: 2rem;
   }
 
   input[type="date"] {
