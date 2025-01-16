@@ -1,0 +1,133 @@
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\Login.g.cs
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\MainWindow.g.cs
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\App.g.cs
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\Reps-Sheet_MarkupCompile.cache
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\Reps-Sheet_MarkupCompile.lref
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\Reps-Sheet.exe
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\Reps-Sheet.deps.json
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\Reps-Sheet.runtimeconfig.json
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\Reps-Sheet.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\Reps-Sheet.pdb
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\Login.baml
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\MainWindow.baml
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\Reps-Sheet.g.resources
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\Reps-Sheet.GeneratedMSBuildEditorConfig.editorconfig
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\Reps-Sheet.AssemblyInfoInputs.cache
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\Reps-Sheet.AssemblyInfo.cs
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\Reps-Sheet.csproj.CoreCompileInputs.cache
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\Reps-Sheet.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\refint\Reps-Sheet.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\Reps-Sheet.pdb
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\Reps-Sheet.genruntimeconfig.cache
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\ref\Reps-Sheet.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\Reps-Sheet.csproj.AssemblyReference.cache
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\Dashboard.g.cs
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\Microsoft.Data.Sqlite.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.Sqlite.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Memory.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyModel.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\SQLitePCLRaw.batteries_v2.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\SQLitePCLRaw.core.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\SQLitePCLRaw.provider.e_sqlite3.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\runtimes\browser-wasm\nativeassets\net8.0\e_sqlite3.a
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\runtimes\linux-arm\native\libe_sqlite3.so
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\runtimes\linux-arm64\native\libe_sqlite3.so
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\runtimes\linux-armel\native\libe_sqlite3.so
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\runtimes\linux-mips64\native\libe_sqlite3.so
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\runtimes\linux-musl-arm\native\libe_sqlite3.so
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\runtimes\linux-musl-arm64\native\libe_sqlite3.so
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\runtimes\linux-musl-x64\native\libe_sqlite3.so
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\runtimes\linux-ppc64le\native\libe_sqlite3.so
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\runtimes\linux-s390x\native\libe_sqlite3.so
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\runtimes\linux-x64\native\libe_sqlite3.so
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\runtimes\linux-x86\native\libe_sqlite3.so
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\runtimes\maccatalyst-arm64\native\libe_sqlite3.dylib
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\runtimes\maccatalyst-x64\native\libe_sqlite3.dylib
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\runtimes\osx-arm64\native\libe_sqlite3.dylib
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\runtimes\osx-x64\native\libe_sqlite3.dylib
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\runtimes\win-arm\native\e_sqlite3.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\runtimes\win-arm64\native\e_sqlite3.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\runtimes\win-x64\native\e_sqlite3.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\runtimes\win-x86\native\e_sqlite3.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\Dashboard.baml
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\Reps-Sheet.csproj.Up2Date
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\Signup.g.cs
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\Signup.baml
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\Reps-Sheet.exe
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\Reps-Sheet.deps.json
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\Reps-Sheet.runtimeconfig.json
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\Reps-Sheet.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\Reps-Sheet.pdb
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\Microsoft.Data.Sqlite.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.Sqlite.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Memory.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyModel.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\SQLitePCLRaw.batteries_v2.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\SQLitePCLRaw.core.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\SQLitePCLRaw.provider.e_sqlite3.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\runtimes\browser-wasm\nativeassets\net8.0\e_sqlite3.a
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\runtimes\linux-arm\native\libe_sqlite3.so
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\runtimes\linux-arm64\native\libe_sqlite3.so
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\runtimes\linux-armel\native\libe_sqlite3.so
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\runtimes\linux-mips64\native\libe_sqlite3.so
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\runtimes\linux-musl-arm\native\libe_sqlite3.so
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\runtimes\linux-musl-arm64\native\libe_sqlite3.so
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\runtimes\linux-musl-x64\native\libe_sqlite3.so
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\runtimes\linux-ppc64le\native\libe_sqlite3.so
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\runtimes\linux-s390x\native\libe_sqlite3.so
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\runtimes\linux-x64\native\libe_sqlite3.so
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\runtimes\linux-x86\native\libe_sqlite3.so
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\runtimes\maccatalyst-arm64\native\libe_sqlite3.dylib
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\runtimes\maccatalyst-x64\native\libe_sqlite3.dylib
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\runtimes\osx-arm64\native\libe_sqlite3.dylib
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\runtimes\osx-x64\native\libe_sqlite3.dylib
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\runtimes\win-arm\native\e_sqlite3.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\runtimes\win-arm64\native\e_sqlite3.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\runtimes\win-x64\native\e_sqlite3.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\bin\Debug\net8.0-windows\runtimes\win-x86\native\e_sqlite3.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\Reps-Sheet.csproj.AssemblyReference.cache
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\Dashboard.g.cs
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\Login.g.cs
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\MainWindow.g.cs
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\Signup.g.cs
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\App.g.cs
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\Reps-Sheet_MarkupCompile.cache
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\Reps-Sheet_MarkupCompile.lref
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\Dashboard.baml
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\Login.baml
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\MainWindow.baml
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\Signup.baml
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\Reps-Sheet.g.resources
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\Reps-Sheet.GeneratedMSBuildEditorConfig.editorconfig
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\Reps-Sheet.AssemblyInfoInputs.cache
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\Reps-Sheet.AssemblyInfo.cs
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\Reps-Sheet.csproj.CoreCompileInputs.cache
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\Reps-Sheet.sourcelink.json
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\Reps-Sheet.csproj.Up2Date
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\Reps-Sheet.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\refint\Reps-Sheet.dll
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\Reps-Sheet.pdb
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\Reps-Sheet.genruntimeconfig.cache
+D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\GUI\Reps-Sheet (Desktop App)\Reps-Sheet\Reps-Sheet\obj\Debug\net8.0-windows\ref\Reps-Sheet.dll

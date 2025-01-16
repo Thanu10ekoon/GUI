@@ -1,0 +1,96 @@
+﻿<Window x:Class="Reps_Sheet.Signup"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Reps_Sheet"
+        mc:Ignorable="d"
+        Title="Signup"
+        Height="450"
+        Width="800">
+    <Grid>
+        <!-- Video Background -->
+        <MediaElement Name="BackgroundVideo"
+                      Source="D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\resources\sloop.mp4"
+                      LoadedBehavior="Play"
+                      UnloadedBehavior="Stop"
+                      Stretch="Fill"
+                      IsHitTestVisible="False"
+                      MediaEnded="BackgroundVideo_MediaEnded"/>
+
+        <Grid >
+            <StackPanel HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Margin="0"
+                        Width="300">
+                <StackPanel.Background>
+                    <SolidColorBrush Color="#000000" Opacity="0.5"/>
+                </StackPanel.Background>
+
+                <Image Source="D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\resources\logo192.png"
+                       Width="80"
+                       Height="80"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,10"
+                       Stretch="Uniform" />
+
+                <TextBlock Text="Signup"
+                           FontSize="24"
+                           FontWeight="Bold"
+                           Foreground="#32CD32"
+                           HorizontalAlignment="Center"
+                           Margin="0,0,0,20" />
+
+                <TextBlock Text="Name"
+                           FontSize="14"
+                           FontWeight="SemiBold"
+                           Foreground="Azure"
+                           Margin="5,0,0,5"/>
+                <TextBox x:Name="nametxt"
+                         FontSize="14"
+                         Height="25"
+                         Width="290"
+                         Margin="0,0,0,15"
+                         BorderBrush="#32CD32"
+                         BorderThickness="2"/>
+
+                <TextBlock Text="Email"
+                           FontSize="14"
+                           FontWeight="SemiBold"
+                           Foreground="Azure"
+                           Margin="5,0,0,5"/>
+                <TextBox x:Name="emailtxt"
+                         FontSize="14"
+                         Height="25"
+                         Width="290"
+                         Margin="0,0,0,15"
+                         BorderBrush="#32CD32"
+                         BorderThickness="2"/>
+
+                <TextBlock Text="Password"
+                           FontSize="14"
+                           FontWeight="SemiBold"
+                           Foreground="Azure"
+                           Margin="5,0,0,5"/>
+                <PasswordBox x:Name="txtPassword"
+                             FontSize="14"
+                             Height="25"
+                             Width="290"
+                             Margin="0,0,0,20"
+                             BorderBrush="#32CD32"
+                             BorderThickness="2"/>
+
+                <Button x:Name="btnSubmit"
+                        Content="Signup"
+                        Width="100"
+                        Height="35"
+                        Background="#28a745"
+                        Padding="5"
+                        Margin="20"
+                        Foreground="White"
+                        FontWeight="Bold"
+                        Click="SignBtnSignPgClick"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
