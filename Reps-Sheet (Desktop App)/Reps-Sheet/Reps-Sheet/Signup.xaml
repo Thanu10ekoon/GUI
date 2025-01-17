@@ -9,7 +9,6 @@
         Height="450"
         Width="800">
     <Grid>
-        <!-- Video Background -->
         <MediaElement Name="BackgroundVideo"
                       Source="D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\resources\sloop.mp4"
                       LoadedBehavior="Play"

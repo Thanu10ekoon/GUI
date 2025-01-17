@@ -9,8 +9,6 @@ namespace Reps_Sheet
         {
             InitializeComponent();
         }
-
-        // Event handler to loop the video when playback ends
         private void BackgroundVideo_MediaEnded(object sender, RoutedEventArgs e)
         {
             BackgroundVideo.Position = TimeSpan.Zero;

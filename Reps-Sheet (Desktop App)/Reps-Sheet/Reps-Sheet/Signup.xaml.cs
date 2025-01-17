@@ -13,12 +13,10 @@ namespace Reps_Sheet
 
         private void SignBtnSignPgClick(object sender, RoutedEventArgs e)
         {
-            // Gather input from the text fields
             string name = nametxt.Text.Trim();
             string email = emailtxt.Text.Trim();
             string password = txtPassword.Password;
 
-            // Optional: Simple validation
             if (string.IsNullOrWhiteSpace(name) ||
                 string.IsNullOrWhiteSpace(email) ||
                 string.IsNullOrWhiteSpace(password))
@@ -30,7 +28,6 @@ namespace Reps_Sheet
                 return;
             }
 
-            // Create new user object
             User newUser = new User
             {
                 Name = name,
@@ -38,7 +35,6 @@ namespace Reps_Sheet
                 Password = password
             };
 
-            // Save to database using EF Core
             try
             {
                 using (var context = new UserDataContext())
@@ -52,14 +48,12 @@ namespace Reps_Sheet
                                 MessageBoxButton.OK,
                                 MessageBoxImage.Information);
 
-                // Clear fields (optional)
                 nametxt.Text = string.Empty;
                 emailtxt.Text = string.Empty;
                 txtPassword.Password = string.Empty;
             }
             catch (Exception ex)
             {
-                // Handle or log exception
                 MessageBox.Show($"Error saving user: {ex.Message}",
                                 "Error",
                                 MessageBoxButton.OK,
@@ -67,7 +61,6 @@ namespace Reps_Sheet
             }
         }
 
-        // Loop the background video when it ends
         private void BackgroundVideo_MediaEnded(object sender, RoutedEventArgs e)
         {
             var mediaElement = sender as MediaElement;

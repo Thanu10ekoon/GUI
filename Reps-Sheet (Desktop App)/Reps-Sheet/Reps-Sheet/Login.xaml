@@ -14,7 +14,7 @@
             <ColumnDefinition Width="103*"/>
             <ColumnDefinition Width="297*"/>
         </Grid.ColumnDefinitions>
-        <!-- Video background -->
+        
         <MediaElement x:Name="BackgroundVideo"
                       Source="D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\resources\lloop.mp4"
                       LoadedBehavior="Play"

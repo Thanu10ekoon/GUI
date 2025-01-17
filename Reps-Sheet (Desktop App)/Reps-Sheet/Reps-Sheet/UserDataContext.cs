@@ -15,5 +15,6 @@ namespace Reps_Sheet
         }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Workout> Workouts { get; set; }
     }
 }

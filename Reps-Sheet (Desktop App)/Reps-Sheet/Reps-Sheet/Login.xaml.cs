@@ -4,9 +4,6 @@ using System.Windows;
 
 namespace Reps_Sheet
 {
-    /// <summary>
-    /// Interaction logic for Login.xaml
-    /// </summary>
     public partial class Login : Window
     {
         public Login()
@@ -28,11 +25,10 @@ namespace Reps_Sheet
 
             using (UserDataContext context = new UserDataContext())
             {
-                bool userfound = context.Users.Any(user => user.email == Email && user.Password == Password);
-
-                if (userfound)
+                var user = context.Users.FirstOrDefault(u => u.email == Email && u.Password == Password);
+                if (user != null)
                 {
-                    GrantAccess();
+                    GrantAccess(user.Id);
                     Close();
                 }
                 else
@@ -42,10 +38,13 @@ namespace Reps_Sheet
             }
         }
 
-        public void GrantAccess()
+
+        public void GrantAccess(int userId)
         {
             Dashboard dashboard = new Dashboard();
+            dashboard.CurrentUserId = userId;
             dashboard.Show();
         }
+
     }
 }
