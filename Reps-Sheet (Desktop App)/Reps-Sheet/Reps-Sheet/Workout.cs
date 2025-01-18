@@ -10,6 +10,8 @@ namespace Reps_Sheet
         public DateTime DateDone { get; set; }
         public int Reps { get; set; }
         public string WorkoutName { get; set; }
+
+        // Foreign key relationship to User
         public int UserId { get; set; }
         public User User { get; set; }
     }

@@ -4,6 +4,9 @@ using System.Windows;
 
 namespace Reps_Sheet
 {
+    /// <summary>
+    /// Interaction logic for Login.xaml
+    /// </summary>
     public partial class Login : Window
     {
         public Login()
@@ -39,12 +42,14 @@ namespace Reps_Sheet
         }
 
 
+
         public void GrantAccess(int userId)
         {
             Dashboard dashboard = new Dashboard();
             dashboard.CurrentUserId = userId;
             dashboard.Show();
         }
+
 
     }
 }

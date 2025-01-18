@@ -4,6 +4,9 @@ using System.Windows;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 namespace Reps_Sheet
 {
+    /// <summary>
+    /// Interaction logic for App.xaml
+    /// </summary>
     public partial class App : Application
     {
         protected override void OnStartup(StartupEventArgs e)

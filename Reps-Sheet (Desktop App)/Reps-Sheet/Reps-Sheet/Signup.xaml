@@ -9,13 +9,15 @@
         Height="450"
         Width="800">
     <Grid>
-        <MediaElement Name="BackgroundVideo"
-                      Source="D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\resources\sloop.mp4"
-                      LoadedBehavior="Play"
-                      UnloadedBehavior="Stop"
-                      Stretch="Fill"
-                      IsHitTestVisible="False"
-                      MediaEnded="BackgroundVideo_MediaEnded"/>
+        <!-- Video Background -->
+        <MediaElement x:Name="BackgroundVideo"
+              Source="D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\resources\sloop.mp4"
+              LoadedBehavior="Play"
+              UnloadedBehavior="Manual"
+              Stretch="Fill"
+              Volume="0"
+              IsHitTestVisible="False"
+              MediaEnded="BackgroundVideo_MediaEnded" Grid.ColumnSpan="2" />
 
         <Grid >
             <StackPanel HorizontalAlignment="Center"

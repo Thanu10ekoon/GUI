@@ -7,6 +7,11 @@ namespace Reps_Sheet
 {
     public partial class Dashboard : Window
     {
+        private void BackgroundVideo_MediaEnded(object sender, RoutedEventArgs e)
+        {
+            BackgroundVideo.Position = TimeSpan.Zero;
+            BackgroundVideo.Play();
+        }
         public int CurrentUserId { get; set; }
         private Workout selectedWorkout;
 

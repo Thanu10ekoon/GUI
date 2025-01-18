@@ -7,7 +7,9 @@
         mc:Ignorable="d"
         Title="Reps-Sheet"
         Height="450"
-        Width="800">
+        Width="800"
+        MaxHeight="450"
+        MaxWidth="800">
 
     <Grid>
         <MediaElement x:Name="BackgroundVideo"
@@ -18,48 +20,65 @@
                       Volume="0"
                       IsHitTestVisible="False"
                       MediaEnded="BackgroundVideo_MediaEnded" />
+        <Border HorizontalAlignment="Center" 
+                VerticalAlignment="Center" 
+                Margin="20 20 20 20"
+                Background="Black"
+                Opacity="0.75"
+                CornerRadius="20"
+                BorderBrush="ForestGreen" 
+                BorderThickness="0.7"
+                Padding="20">
+            <!-- Overlay content -->
+            <StackPanel HorizontalAlignment="Center" 
+                        VerticalAlignment="Center" 
+                        Margin="20 20 20 20"
+                        Background="Black"
+                        >
 
-        <!-- Overlay content -->
-        <StackPanel HorizontalAlignment="Center" 
-                    VerticalAlignment="Center" 
-                    Margin="20">
+                <Image Source="D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\resources\logo192.png"
+                       Width="150"
+                       Height="150"
+                       Margin="20"
+                       Stretch="Uniform"/>
 
-            <Image Source="D:\Studies\3rd Semester\Modules\EC3404 - GUI Programming\Project\DesktopApp\Reps-Sheet\Reps-Sheet\resources\logo192.png"
-                   Width="150"
-                   Height="150"
-                   Margin="0,0,0,20"
-                   Stretch="Uniform"/>
+                <TextBlock Text="Reps Sheet helps you track your workouts, push your limits, and reach your goals faster. Whether you're a beginner or seasoned athlete, we make it simple to stay motivated and see real progress."
+                           FontSize="16"
+                           TextWrapping="Wrap"
+                           TextAlignment="Center"
+                           Foreground="White"
+                           Margin="20,0,20,0"
+                           Width="400"
+                           FontWeight="SemiBold"/>
 
-            <TextBlock Text="Reps Sheet helps you track your workouts, push your limits, and reach your goals faster. Whether you're a beginner or seasoned athlete, we make it simple to stay motivated and see real progress."
-                       FontSize="16"
-                       TextWrapping="Wrap"
-                       TextAlignment="Center"
-                       Foreground="White"
-                       Margin="0,0,0,20"
-                       Width="400"/>
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center">
 
-            <StackPanel Orientation="Horizontal"
-                        HorizontalAlignment="Center">
+                    <Button x:Name="LoginButton"
+                            Content="Login"
+                            Width="100"
+                            Height="40"
+                            Background="#28a745"
+                            Foreground="White"
+                            FontWeight="Bold"
+                            Click="LoginButton_Click"
+                            Margin="20 20 20 40"
+                            FontSize="18"/>
 
-                <Button x:Name="LoginButton"
-                        Content="Login"
-                        Width="100"
-                        Height="40"
-                        Background="LightGreen"
-                        Foreground="White"
-                        FontWeight="Bold"
-                        Click="LoginButton_Click"/>
+                    <Button x:Name="SignupButton"
+                            Content="Signup"
+                            Width="100"
+                            Height="40"
+                            Background="#28a745"
+                            Foreground="White"
+                            FontWeight="Bold"
+                            BorderBrush="Green"
+                            Click="SignupButton_Click"
+                            Margin="20 20 20 40"
+                            FontSize="18"/>
 
-                <Button x:Name="SignupButton"
-                        Content="Signup"
-                        Width="100"
-                        Height="40"
-                        Background="#90EE90"
-                        Foreground="White"
-                        FontWeight="Bold"
-                        Click="SignupButton_Click"/>
-
+                </StackPanel>
             </StackPanel>
-        </StackPanel>
+        </Border>
     </Grid>
 </Window>
