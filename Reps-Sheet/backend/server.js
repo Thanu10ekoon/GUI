@@ -15,17 +15,16 @@ app.use(cors());
 
 // Database connection
 const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "reps-sheet",
+  // host: "localhost",
+  // user: "root",
+  // password: "",
+  // database: "reps-sheet",
 
-  // If using Clever Cloud or other, comment out the above lines and use below:
-  // host: "bp2juxysn0nszxvmkkzj-mysql.services.clever-cloud.com",
-  // user: "udflccbdblfustx7",
-  // password: "qgnCvYDdKjXJIfaLe8hL",
-  // database: "bp2juxysn0nszxvmkkzj",
-  // port: 3306
+  host: "bp2juxysn0nszxvmkkzj-mysql.services.clever-cloud.com",
+  user: "udflccbdblfustx7",
+  password: "qgnCvYDdKjXJIfaLe8hL",
+  database: "bp2juxysn0nszxvmkkzj",
+  port: 3306
 });
 
 /* --------------- Signup & Login --------------- */

@@ -15,7 +15,8 @@ function Login() {
         setErrors(err);
 
         if (!err.email && !err.password) {
-            axios.post('http://localhost:8082/login', values) //
+            const baseUrl = process.env.REACT_APP_API_URL; // Fetch base URL from environment
+            axios.post(`${baseUrl}/login`, values)
                 .then((res) => {
                     if (res.data === 'Invalid Email or Password') {
                         alert('No Record Found');
@@ -26,7 +27,7 @@ function Login() {
                         alert('Some error: ' + res.data);
                     }
                 })
-                .catch((err) => console.error(err));
+                .catch((err) => console.error('Login Error:', err));
         }
     };
 
@@ -39,7 +40,6 @@ function Login() {
 
     return (
         <div className="background-video-wrapper">
-            {/* Background video */}
             <video
                 className="background-video"
                 autoPlay
@@ -48,7 +48,6 @@ function Login() {
                 src={`${process.env.PUBLIC_URL}/resources/lloop.mp4`}
             />
             
-            {/* Clickable Logo */}
             <Link to="/GUI/">
                 <img 
                     src={`${process.env.PUBLIC_URL}/logo192.png`}
