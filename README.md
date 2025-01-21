@@ -24,11 +24,7 @@
 <p>(The features outlined here will be subjected to further refinement or modification during the development process of this project.)</p>
 <p> </p>
 
-<p align="center"><a href="https://github.com/Thanu10ekoon">GitHub</a>
-<a href="https://www.linkedin.com/in/thanujaya-tennekoon-b9a155271/">Linkedin</a>
-<a href="https://thanu10ekoon.github.io/web">Web</a>
-<a href="https://web.facebook.com/thanu.ten.5">Facebook</a>
-</p>
+
 <h2>UI Decisions</h2>
 <h3>Color Palette</h3>
 <a href="https://ibb.co/cCmcQhc"><img src="https://i.ibb.co/hZqRVFR/895bd055f3bc4832e1aa46c56ff4e4a4.png" alt="895bd055f3bc4832e1aa46c56ff4e4a4" border="0" width="100px"></a>
@@ -56,4 +52,8 @@
 <a href="https://web.facebook.com/thanu.ten.5" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="facebook.com/thanu.ten.5" height="35" width="45" /></a>
 |
 </p>
-
+<p align="center"><a href="https://github.com/Thanu10ekoon">GitHub</a>
+<a href="https://www.linkedin.com/in/thanujaya-tennekoon-b9a155271/">Linkedin</a>
+<a href="https://thanu10ekoon.github.io/web">Web</a>
+<a href="https://web.facebook.com/thanu.ten.5">Facebook</a>
+</p>
