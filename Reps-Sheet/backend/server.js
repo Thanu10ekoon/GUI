@@ -256,6 +256,5 @@ app.post("/updateUserProfile", (req, res) => {
 });
 
 /* --------------- Start the server --------------- */
-app.listen(8082, () => {
-  console.log("Listening on port 8082");
-});
+module.exports = app;
+
