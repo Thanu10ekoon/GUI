@@ -5,7 +5,11 @@ const express = require("express");
 const mysql = require("mysql");
 const cors = require("cors");
 
-const app = express();
+app.use(cors({
+  origin: "https://thanu10ekoon.github.io/GUI/", // Replace with your GitHub Pages URL
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 
 // Increase body size limit to allow larger Base64 images:
 app.use(express.json({ limit: "10mb" }));
