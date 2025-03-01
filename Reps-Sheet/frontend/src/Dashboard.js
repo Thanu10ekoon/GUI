@@ -14,18 +14,17 @@ import {
   Legend,
 } from "chart.js";
 
-// Register chart components
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
-// Day names
 const dayNames = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
 function Dashboard() {
-  const [searchDate, setSearchDate] = useState("");
+  // Set the default value of searchDate to the current date
+  const [searchDate, setSearchDate] = useState(new Date().toISOString().slice(0, 10));
   const [logs, setLogs] = useState([]);
   const [weekData, setWeekData] = useState([]);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [profilePic, setProfilePic] = useState(""); // for user’s profile image
+  const [profilePic, setProfilePic] = useState("");
 
   const userName = localStorage.getItem("userName");
   const navigate = useNavigate();
@@ -40,7 +39,6 @@ function Dashboard() {
     // eslint-disable-next-line
   }, []);
 
-  // --- fetch user’s profile image from /getUserProfile
   const fetchProfileImage = () => {
     axios
       .post("http://localhost:8082/getUserProfile", { username: userName })
@@ -58,7 +56,6 @@ function Dashboard() {
       });
   };
 
-  // Toggle mobile menu
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
@@ -68,7 +65,7 @@ function Dashboard() {
     navigate("/GUI/login");
   };
 
-  // Handle fetching workouts for chosen date
+  // Workouts for chosen date
   const handleGetWorkouts = (e) => {
     e.preventDefault();
     if (!searchDate) {
@@ -84,7 +81,7 @@ function Dashboard() {
       .catch((err) => console.log(err));
   };
 
-  // Fetch last 7 days of data
+  // Fetch last week of data
   const fetchWeeklyData = () => {
     axios
       .post("http://localhost:8082/getWeeklyWorkouts", { name: userName })
@@ -94,7 +91,7 @@ function Dashboard() {
       .catch((err) => console.log(err));
   };
 
-  // Tally up total reps by day name
+  // Tally reps in each day of last week for chart
   const dayTotals = {
     Monday: 0,
     Tuesday: 0,
@@ -105,14 +102,13 @@ function Dashboard() {
     Sunday: 0,
   };
 
-  // For each date from DB, figure out which day of week
   weekData.forEach((item) => {
-    const dayIndex = new Date(item.date).getDay(); 
+    const dayIndex = new Date(item.date).getDay();
     const dayName = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][dayIndex];
     dayTotals[dayName] += item.totalReps;
   });
 
-  // Chart data config
+  // Chart data configuration
   const chartData = {
     labels: dayNames,
     datasets: [
@@ -124,7 +120,7 @@ function Dashboard() {
     ],
   };
 
-  // Chart options
+  // Chart options configuration
   const options = {
     responsive: true,
     maintainAspectRatio: false,
@@ -136,7 +132,7 @@ function Dashboard() {
       y: {
         grid: { display: false },
         beginAtZero: true,
-        ticks:{display:false},
+        ticks: { display: false },
       },
     },
     plugins: {
@@ -162,7 +158,6 @@ function Dashboard() {
         />
       </video>
 
-      {/* Navbar */}
       <nav className="pnavbar">
         <div className="pnav-left">
           <Link to="/GUI/">
@@ -193,7 +188,7 @@ function Dashboard() {
           </Link>
         </div>
 
-        {/* Hamburger icon */}
+        {/* Menu icon */}
         <div className="phamburger" onClick={toggleMenu} style={{ marginRight: "15px" }}>
           <span className="pbar"></span>
           <span className="pbar"></span>
@@ -204,9 +199,8 @@ function Dashboard() {
 
       {/* Main content container */}
       <div className="pdashboard-content">
-        {/* LEFT CARD */}
+        {/* Left Card */}
         <div className="pdashboard-card pdashboard-left-card">
-          
           <h3 className="dh3">Workout Log</h3>
           <form onSubmit={handleGetWorkouts} className="pdate-form">
             <label>Select Date:</label>
@@ -216,7 +210,7 @@ function Dashboard() {
               onChange={(e) => setSearchDate(e.target.value)}
             />
             <button type="submit" className="pbtn-get-workouts">
-              Get Workouts
+              Show Workout Log
             </button>
           </form>
 
@@ -244,7 +238,7 @@ function Dashboard() {
           </div>
         </div>
 
-        {/* RIGHT CARD */}
+        {/* Right Card */}
         <div className="pdashboard-card">
           <div className="pchart-container">
             <Bar data={chartData} options={options} />

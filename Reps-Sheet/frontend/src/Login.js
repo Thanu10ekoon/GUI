@@ -15,7 +15,7 @@ function Login() {
         setErrors(err);
 
         if (!err.email && !err.password) {
-            const baseUrl = process.env.REACT_APP_API_URL; // Fetch base URL from environment
+            const baseUrl = process.env.REACT_APP_API_URL;
             axios.post(`${baseUrl}/login`, values)
                 .then((res) => {
                     if (res.data === 'Invalid Email or Password') {
@@ -65,7 +65,7 @@ function Login() {
                             <input
                                 type="email"
                                 name="email"
-                                placeholder='Email@Host.com'
+                                placeholder='ex:- eg245364@engug.ruh.ac.lk'
                                 value={values.email}
                                 onChange={handleInput}
                             />

@@ -11,7 +11,7 @@ function Home() {
 
   return (
     <div className="home-container">
-      {/* Background Video */}
+      
       <video className="background-video" autoPlay muted loop>
         <source
           src={`${process.env.PUBLIC_URL}/resources/hloop.mp4`}
@@ -31,10 +31,10 @@ function Home() {
         </div>
         <div className={`nav-right ${menuOpen ? "open" : ""}`}>
           <Link to="/GUI/signup" onClick={() => setMenuOpen(false)}>
-            Register
+            Sign Up
           </Link>
           <Link to="/GUI/login" onClick={() => setMenuOpen(false)}>
-            Sign In
+            Login
           </Link>
         </div>
         <div className="hamburger" onClick={toggleMenu}>
@@ -44,11 +44,10 @@ function Home() {
         </div>
       </nav>
 
-      {/* Hero Content */}
       <div className="hero-content">
-        {/* Translucent box containing text, CTA button, etc. */}
         <div className="hero-overlay">
-          <h1>Train Smarter, Get Fitter</h1>
+          <h1 className="hh1">Train Smarter </h1>
+          <h1 className="hh1">Get Fitter</h1>
           <img src={`${process.env.PUBLIC_URL}/logo192.png`} className="logo1" alt="logo"></img>
           <p>
             Reps-Sheet helps you track your workouts, push your limits, 
@@ -57,11 +56,8 @@ function Home() {
             see real progress.
           </p>
           <Link to="/GUI/signup" className="btn-start">
-            Start free
+            Start Now
           </Link>
-          {/* <a href="#how-it-works" className="hero-link">
-            See how it works
-          </a> */}
         </div>
       </div>
     </div>

@@ -63,7 +63,7 @@ function Signup() {
               <input
                 type="text"
                 name="name"
-                placeholder="Thanujaya"
+                placeholder="ex:- Thanujaya"
                 onChange={handleINput}
               />
               {errors.name && (
@@ -76,7 +76,7 @@ function Signup() {
               <input
                 type="email"
                 name="email"
-                placeholder="eg245364@engug.ruh.ac.lk"
+                placeholder="ex:- eg245364@engug.ruh.ac.lk"
                 onChange={handleINput}
               />
               {errors.email && (
@@ -97,7 +97,8 @@ function Signup() {
               )}
             </div>
 
-            <p className='p1'>Agree to T&C</p>
+            
+            <p className='p1'><input type="checkbox" className="checkbox"/>Agree to T&C</p>
             <button type="submit" className="btn-signup">Sign Up</button>
             
             <Link to="/GUI/login" className="btn-login">

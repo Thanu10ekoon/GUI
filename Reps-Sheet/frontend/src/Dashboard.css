@@ -1,8 +1,3 @@
-/***************************************************
- * Dashboard.css – with “p” prefix
- **************************************************/
-
-/* Main container + background video */
 .pdashboard-container {
   position: relative;
   width: 100vw;
@@ -69,7 +64,6 @@
   color: #28a745;
 }
 
-/* Profile pic in navbar */
 .pnav-profile-pic {
   width: 35px;
   height: 35px;
@@ -78,7 +72,6 @@
   margin-left: 1rem;
 }
 
-/* Hamburger menu */
 .phamburger {
   display: none;
   flex-direction: column;
@@ -92,7 +85,6 @@
   margin: 4px 0;
 }
 
-/* Dashboard content container */
 .pdashboard-content {
   display: flex;
   flex-wrap: wrap;
@@ -102,7 +94,6 @@
   padding: 2rem;
 }
 
-/* Cards */
 .pdashboard-card {
   width: 45%;
   max-width: 500px;
@@ -115,7 +106,6 @@
   color: #fff;
 }
 
-/* Form for date selection */
 .pdate-form {
   display: flex;
   flex-direction: column;
@@ -140,7 +130,6 @@
   font-weight: bold;
 }
 
-/* The button to get workouts */
 .pbtn-get-workouts {
   background-color: #28a745;
   border: none;
@@ -176,7 +165,6 @@
   background-color: #218838;
 }
 
-/* Workout log table */
 .pworkout-logs table {
   width: 100%;
   border-collapse: collapse;
@@ -191,18 +179,15 @@
   border-bottom: 1px solid #ccc;
 }
 
-/* Chart container */
 .pchart-container {
   width: 100%;
   height: 400px;
 }
 
-/* “popen” class for expanded nav on mobile */
 .pnav-right.popen {
   max-height: 200px; 
 }
 
-/* --- Mobile responsiveness --- */
 @media (max-width: 768px) {
   .pnavbar {
     height: 60px;

@@ -1,23 +1,14 @@
-/***************************************************
- * server.js – Node/Express server with MySQL
- **************************************************/
 const express = require("express");
 const mysql = require("mysql");
 const cors = require("cors");
 
-app.use(cors({
-  origin: "https://thanu10ekoon.github.io/GUI/", // Replace with your GitHub Pages URL
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true
-}));
+const app = express();
 
-// Increase body size limit to allow larger Base64 images:
 app.use(express.json({ limit: "10mb" }));
 app.use(express.urlencoded({ limit: "10mb", extended: true }));
 
 app.use(cors());
 
-// Database connection
 const db = mysql.createConnection({
   // host: "localhost",
   // user: "root",
@@ -31,7 +22,6 @@ const db = mysql.createConnection({
   port: 3306
 });
 
-/* --------------- Signup & Login --------------- */
 app.post("/signup", (req, res) => {
   const sql = "INSERT INTO login (`name`, `email`, `password`) VALUES (?)";
   const values = [req.body.name, req.body.email, req.body.password];
@@ -52,7 +42,6 @@ app.post("/login", (req, res) => {
       return res.json("Error");
     }
     if (data.length > 0) {
-      // Return { status: "Login Success", name: <theUserName> }
       return res.json({ status: "Login Success", name: data[0].name });
     } else {
       return res.json("Invalid Email or Password");
@@ -60,7 +49,7 @@ app.post("/login", (req, res) => {
   });
 });
 
-/* --------------- Workout Endpoints --------------- */
+
 app.post("/addWorkout", (req, res) => {
   const { name, workout, reps, workoutDate } = req.body;
   const sql = "INSERT INTO workout (`name`, `workout`, `reps`, `workout_date`) VALUES (?)";
@@ -94,10 +83,9 @@ app.post("/getWorkouts", (req, res) => {
       console.error("getWorkouts Error:", err);
       return res.json("Error");
     }
-    return res.json(data); // array of workout objects
+    return res.json(data);
   });
 
-  // Nested route in your original code—keep outside for clarity, but here it is:
   app.post("/updateWorkout", (req, res) => {
     const { id, workout, reps, workoutDate } = req.body;
     const sql = "UPDATE workout SET workout = ?, reps = ?, workout_date = ? WHERE id = ?";
@@ -111,7 +99,6 @@ app.post("/getWorkouts", (req, res) => {
   });
 });
 
-/* --------------- Weekly Workouts --------------- */
 app.post("/getWeeklyWorkouts", (req, res) => {
   const { name } = req.body;
   const sql = `
@@ -129,23 +116,12 @@ app.post("/getWeeklyWorkouts", (req, res) => {
       console.error("getWeeklyWorkouts Error:", err);
       return res.json("Error");
     }
-    // data = [ { date: '2024-01-01', totalReps: 50 }, ... ]
     return res.json(data);
   });
 });
 
-/* --------------- Profile Endpoints --------------- */
-
-/**
- * getUserProfile
- * 1) checks if user_profile row exists
- * 2) if not, copy name/email/password from login
- * 3) return the user_profile row
- */
 app.post("/getUserProfile", (req, res) => {
   const { username } = req.body;
-
-  // Check if user_profile row exists
   const checkSql = "SELECT * FROM user_profile WHERE username = ?";
   db.query(checkSql, [username], (err, data) => {
     if (err) {
@@ -153,15 +129,13 @@ app.post("/getUserProfile", (req, res) => {
       return res.json("Error");
     }
     if (data.length > 0) {
-      // Already exists; convert profile_image to string if not null
+
       const row = data[0];
       if (row.profile_image) {
-        // convert from Buffer -> string
         row.profile_image = row.profile_image.toString();
       }
       return res.json(row);
     } else {
-      // Not found, so let's copy from login table
       const loginSql = "SELECT * FROM login WHERE name = ?";
       db.query(loginSql, [username], (err2, loginData) => {
         if (err2) {
@@ -171,7 +145,6 @@ app.post("/getUserProfile", (req, res) => {
 
         if (loginData.length > 0) {
           const { name, email, password } = loginData[0];
-          // Insert a new row: username, email, password, other fields empty
           const insertSql = `
             INSERT INTO user_profile 
               (username, email, password, name, age, weight, height, profile_image)
@@ -183,7 +156,6 @@ app.post("/getUserProfile", (req, res) => {
               console.error("Error inserting user_profile:", err3);
               return res.json("Error");
             }
-            // Now fetch that newly created row
             db.query(checkSql, [username], (err4, newData) => {
               if (err4) {
                 console.error("Error retrieving new user_profile:", err4);
@@ -201,7 +173,6 @@ app.post("/getUserProfile", (req, res) => {
             });
           });
         } else {
-          // No row found in login with that name
           return res.json("No user found in login table.");
         }
       });
@@ -209,10 +180,6 @@ app.post("/getUserProfile", (req, res) => {
   });
 });
 
-/**
- * updateUserProfile
- * – updates all fields, including new Base64 profile image
- */
 app.post("/updateUserProfile", (req, res) => {
   const {
     username,
@@ -222,10 +189,9 @@ app.post("/updateUserProfile", (req, res) => {
     height,
     email,
     password,
-    profileImage, // Base64 from front-end
+    profileImage,
   } = req.body;
 
-  // Basic checks
   if (!email || !email.includes("@")) {
     return res.json("Invalid email address");
   }
@@ -255,6 +221,6 @@ app.post("/updateUserProfile", (req, res) => {
   });
 });
 
-/* --------------- Start the server --------------- */
-module.exports = app;
-
+app.listen(8082, () => {
+  console.log("Listening on port 8082");
+});

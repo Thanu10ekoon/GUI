@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Reps-Sheet")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ee8412b210e9ac09449bd96aca3816b0206f5ed6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+20b1fb56370872e3144bff9bd8f82d99273e696d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Reps-Sheet")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Reps-Sheet")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
