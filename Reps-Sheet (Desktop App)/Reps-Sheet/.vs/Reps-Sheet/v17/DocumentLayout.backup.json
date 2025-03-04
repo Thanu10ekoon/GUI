@@ -3,14 +3,6 @@
   "WorkspaceRootPath": "D:\\Studies\\3rd Semester\\Modules\\EC3404 - GUI Programming\\Project\\GUI\\Reps-Sheet (Desktop App)\\Reps-Sheet\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0E189C4F-F734-4C76-9797-4EE4D3EFD791}|Reps-Sheet\\Reps-Sheet.csproj|d:\\studies\\3rd semester\\modules\\ec3404 - gui programming\\project\\gui\\reps-sheet (desktop app)\\reps-sheet\\reps-sheet\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{0E189C4F-F734-4C76-9797-4EE4D3EFD791}|Reps-Sheet\\Reps-Sheet.csproj|solutionrelative:reps-sheet\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E189C4F-F734-4C76-9797-4EE4D3EFD791}|Reps-Sheet\\Reps-Sheet.csproj|d:\\studies\\3rd semester\\modules\\ec3404 - gui programming\\project\\gui\\reps-sheet (desktop app)\\reps-sheet\\reps-sheet\\signup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{0E189C4F-F734-4C76-9797-4EE4D3EFD791}|Reps-Sheet\\Reps-Sheet.csproj|solutionrelative:reps-sheet\\signup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0E189C4F-F734-4C76-9797-4EE4D3EFD791}|Reps-Sheet\\Reps-Sheet.csproj|d:\\studies\\3rd semester\\modules\\ec3404 - gui programming\\project\\gui\\reps-sheet (desktop app)\\reps-sheet\\reps-sheet\\dashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{0E189C4F-F734-4C76-9797-4EE4D3EFD791}|Reps-Sheet\\Reps-Sheet.csproj|solutionrelative:reps-sheet\\dashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -19,20 +11,28 @@
       "RelativeMoniker": "D:0:0:{0E189C4F-F734-4C76-9797-4EE4D3EFD791}|Reps-Sheet\\Reps-Sheet.csproj|solutionrelative:reps-sheet\\dashboard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0E189C4F-F734-4C76-9797-4EE4D3EFD791}|Reps-Sheet\\Reps-Sheet.csproj|d:\\studies\\3rd semester\\modules\\ec3404 - gui programming\\project\\gui\\reps-sheet (desktop app)\\reps-sheet\\reps-sheet\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E189C4F-F734-4C76-9797-4EE4D3EFD791}|Reps-Sheet\\Reps-Sheet.csproj|solutionrelative:reps-sheet\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0E189C4F-F734-4C76-9797-4EE4D3EFD791}|Reps-Sheet\\Reps-Sheet.csproj|d:\\studies\\3rd semester\\modules\\ec3404 - gui programming\\project\\gui\\reps-sheet (desktop app)\\reps-sheet\\reps-sheet\\signup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0E189C4F-F734-4C76-9797-4EE4D3EFD791}|Reps-Sheet\\Reps-Sheet.csproj|solutionrelative:reps-sheet\\signup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0E189C4F-F734-4C76-9797-4EE4D3EFD791}|Reps-Sheet\\Reps-Sheet.csproj|d:\\studies\\3rd semester\\modules\\ec3404 - gui programming\\project\\gui\\reps-sheet (desktop app)\\reps-sheet\\reps-sheet\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{0E189C4F-F734-4C76-9797-4EE4D3EFD791}|Reps-Sheet\\Reps-Sheet.csproj|solutionrelative:reps-sheet\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{0E189C4F-F734-4C76-9797-4EE4D3EFD791}|Reps-Sheet\\Reps-Sheet.csproj|d:\\studies\\3rd semester\\modules\\ec3404 - gui programming\\project\\gui\\reps-sheet (desktop app)\\reps-sheet\\reps-sheet\\signup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E189C4F-F734-4C76-9797-4EE4D3EFD791}|Reps-Sheet\\Reps-Sheet.csproj|solutionrelative:reps-sheet\\signup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E189C4F-F734-4C76-9797-4EE4D3EFD791}|Reps-Sheet\\Reps-Sheet.csproj|d:\\studies\\3rd semester\\modules\\ec3404 - gui programming\\project\\gui\\reps-sheet (desktop app)\\reps-sheet\\reps-sheet\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0E189C4F-F734-4C76-9797-4EE4D3EFD791}|Reps-Sheet\\Reps-Sheet.csproj|solutionrelative:reps-sheet\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E189C4F-F734-4C76-9797-4EE4D3EFD791}|Reps-Sheet\\Reps-Sheet.csproj|d:\\studies\\3rd semester\\modules\\ec3404 - gui programming\\project\\gui\\reps-sheet (desktop app)\\reps-sheet\\reps-sheet\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E189C4F-F734-4C76-9797-4EE4D3EFD791}|Reps-Sheet\\Reps-Sheet.csproj|solutionrelative:reps-sheet\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0E189C4F-F734-4C76-9797-4EE4D3EFD791}|Reps-Sheet\\Reps-Sheet.csproj|d:\\studies\\3rd semester\\modules\\ec3404 - gui programming\\project\\gui\\reps-sheet (desktop app)\\reps-sheet\\reps-sheet\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0E189C4F-F734-4C76-9797-4EE4D3EFD791}|Reps-Sheet\\Reps-Sheet.csproj|solutionrelative:reps-sheet\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0E189C4F-F734-4C76-9797-4EE4D3EFD791}|Reps-Sheet\\Reps-Sheet.csproj|d:\\studies\\3rd semester\\modules\\ec3404 - gui programming\\project\\gui\\reps-sheet (desktop app)\\reps-sheet\\reps-sheet\\signup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E189C4F-F734-4C76-9797-4EE4D3EFD791}|Reps-Sheet\\Reps-Sheet.csproj|solutionrelative:reps-sheet\\signup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0E189C4F-F734-4C76-9797-4EE4D3EFD791}|Reps-Sheet\\Reps-Sheet.csproj|d:\\studies\\3rd semester\\modules\\ec3404 - gui programming\\project\\gui\\reps-sheet (desktop app)\\reps-sheet\\reps-sheet\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0E189C4F-F734-4C76-9797-4EE4D3EFD791}|Reps-Sheet\\Reps-Sheet.csproj|solutionrelative:reps-sheet\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0E189C4F-F734-4C76-9797-4EE4D3EFD791}|Reps-Sheet\\Reps-Sheet.csproj|d:\\studies\\3rd semester\\modules\\ec3404 - gui programming\\project\\gui\\reps-sheet (desktop app)\\reps-sheet\\reps-sheet\\migrations\\20250117150115_addworkoutmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -62,59 +62,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Dashboard.xaml",
-              "DocumentMoniker": "D:\\Studies\\3rd Semester\\Modules\\EC3404 - GUI Programming\\Project\\GUI\\Reps-Sheet (Desktop App)\\Reps-Sheet\\Reps-Sheet\\Dashboard.xaml",
-              "RelativeDocumentMoniker": "Reps-Sheet\\Dashboard.xaml",
-              "ToolTip": "D:\\Studies\\3rd Semester\\Modules\\EC3404 - GUI Programming\\Project\\GUI\\Reps-Sheet (Desktop App)\\Reps-Sheet\\Reps-Sheet\\Dashboard.xaml",
-              "RelativeToolTip": "Reps-Sheet\\Dashboard.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-15T16:25:12.485Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Login.xaml.cs",
-              "DocumentMoniker": "D:\\Studies\\3rd Semester\\Modules\\EC3404 - GUI Programming\\Project\\GUI\\Reps-Sheet (Desktop App)\\Reps-Sheet\\Reps-Sheet\\Login.xaml.cs",
-              "RelativeDocumentMoniker": "Reps-Sheet\\Login.xaml.cs",
-              "ToolTip": "D:\\Studies\\3rd Semester\\Modules\\EC3404 - GUI Programming\\Project\\GUI\\Reps-Sheet (Desktop App)\\Reps-Sheet\\Reps-Sheet\\Login.xaml.cs",
-              "RelativeToolTip": "Reps-Sheet\\Login.xaml.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAmwBUAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T16:24:44.036Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "D:\\Studies\\3rd Semester\\Modules\\EC3404 - GUI Programming\\Project\\GUI\\Reps-Sheet (Desktop App)\\Reps-Sheet\\Reps-Sheet\\App.xaml.cs",
-              "RelativeDocumentMoniker": "Reps-Sheet\\App.xaml.cs",
-              "ToolTip": "D:\\Studies\\3rd Semester\\Modules\\EC3404 - GUI Programming\\Project\\GUI\\Reps-Sheet (Desktop App)\\Reps-Sheet\\Reps-Sheet\\App.xaml.cs",
-              "RelativeToolTip": "Reps-Sheet\\App.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T16:54:17.904Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Signup.xaml",
-              "DocumentMoniker": "D:\\Studies\\3rd Semester\\Modules\\EC3404 - GUI Programming\\Project\\GUI\\Reps-Sheet (Desktop App)\\Reps-Sheet\\Reps-Sheet\\Signup.xaml",
-              "RelativeDocumentMoniker": "Reps-Sheet\\Signup.xaml",
-              "ToolTip": "D:\\Studies\\3rd Semester\\Modules\\EC3404 - GUI Programming\\Project\\GUI\\Reps-Sheet (Desktop App)\\Reps-Sheet\\Reps-Sheet\\Signup.xaml",
-              "RelativeToolTip": "Reps-Sheet\\Signup.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-15T17:27:54.959Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\Studies\\3rd Semester\\Modules\\EC3404 - GUI Programming\\Project\\GUI\\Reps-Sheet (Desktop App)\\Reps-Sheet\\Reps-Sheet\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Reps-Sheet\\MainWindow.xaml",
@@ -126,14 +78,53 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Login.xaml",
               "DocumentMoniker": "D:\\Studies\\3rd Semester\\Modules\\EC3404 - GUI Programming\\Project\\GUI\\Reps-Sheet (Desktop App)\\Reps-Sheet\\Reps-Sheet\\Login.xaml",
               "RelativeDocumentMoniker": "Reps-Sheet\\Login.xaml",
               "ToolTip": "D:\\Studies\\3rd Semester\\Modules\\EC3404 - GUI Programming\\Project\\GUI\\Reps-Sheet (Desktop App)\\Reps-Sheet\\Reps-Sheet\\Login.xaml",
               "RelativeToolTip": "Reps-Sheet\\Login.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-15T16:09:58.79Z"
+              "WhenOpened": "2025-01-15T16:09:58.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Dashboard.xaml",
+              "DocumentMoniker": "D:\\Studies\\3rd Semester\\Modules\\EC3404 - GUI Programming\\Project\\GUI\\Reps-Sheet (Desktop App)\\Reps-Sheet\\Reps-Sheet\\Dashboard.xaml",
+              "RelativeDocumentMoniker": "Reps-Sheet\\Dashboard.xaml",
+              "ToolTip": "D:\\Studies\\3rd Semester\\Modules\\EC3404 - GUI Programming\\Project\\GUI\\Reps-Sheet (Desktop App)\\Reps-Sheet\\Reps-Sheet\\Dashboard.xaml",
+              "RelativeToolTip": "Reps-Sheet\\Dashboard.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-15T16:25:12.485Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Signup.xaml.cs",
+              "DocumentMoniker": "D:\\Studies\\3rd Semester\\Modules\\EC3404 - GUI Programming\\Project\\GUI\\Reps-Sheet (Desktop App)\\Reps-Sheet\\Reps-Sheet\\Signup.xaml.cs",
+              "RelativeDocumentMoniker": "Reps-Sheet\\Signup.xaml.cs",
+              "ToolTip": "D:\\Studies\\3rd Semester\\Modules\\EC3404 - GUI Programming\\Project\\GUI\\Reps-Sheet (Desktop App)\\Reps-Sheet\\Reps-Sheet\\Signup.xaml.cs",
+              "RelativeToolTip": "Reps-Sheet\\Signup.xaml.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAA3wE8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T17:35:49.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Login.xaml.cs",
+              "DocumentMoniker": "D:\\Studies\\3rd Semester\\Modules\\EC3404 - GUI Programming\\Project\\GUI\\Reps-Sheet (Desktop App)\\Reps-Sheet\\Reps-Sheet\\Login.xaml.cs",
+              "RelativeDocumentMoniker": "Reps-Sheet\\Login.xaml.cs",
+              "ToolTip": "D:\\Studies\\3rd Semester\\Modules\\EC3404 - GUI Programming\\Project\\GUI\\Reps-Sheet (Desktop App)\\Reps-Sheet\\Reps-Sheet\\Login.xaml.cs",
+              "RelativeToolTip": "Reps-Sheet\\Login.xaml.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAYwDoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T16:24:44.036Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -161,27 +152,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Dashboard.xaml.cs",
               "DocumentMoniker": "D:\\Studies\\3rd Semester\\Modules\\EC3404 - GUI Programming\\Project\\GUI\\Reps-Sheet (Desktop App)\\Reps-Sheet\\Reps-Sheet\\Dashboard.xaml.cs",
               "RelativeDocumentMoniker": "Reps-Sheet\\Dashboard.xaml.cs",
               "ToolTip": "D:\\Studies\\3rd Semester\\Modules\\EC3404 - GUI Programming\\Project\\GUI\\Reps-Sheet (Desktop App)\\Reps-Sheet\\Reps-Sheet\\Dashboard.xaml.cs",
               "RelativeToolTip": "Reps-Sheet\\Dashboard.xaml.cs",
-              "ViewState": "AgIAAI8AAAAAAAAAAAAIwKsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAMwIwAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-17T14:27:58.617Z"
+              "WhenOpened": "2025-01-17T14:27:58.617Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Signup.xaml.cs",
-              "DocumentMoniker": "D:\\Studies\\3rd Semester\\Modules\\EC3404 - GUI Programming\\Project\\GUI\\Reps-Sheet (Desktop App)\\Reps-Sheet\\Reps-Sheet\\Signup.xaml.cs",
-              "RelativeDocumentMoniker": "Reps-Sheet\\Signup.xaml.cs",
-              "ToolTip": "D:\\Studies\\3rd Semester\\Modules\\EC3404 - GUI Programming\\Project\\GUI\\Reps-Sheet (Desktop App)\\Reps-Sheet\\Reps-Sheet\\Signup.xaml.cs",
-              "RelativeToolTip": "Reps-Sheet\\Signup.xaml.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAYwEYAAAAIAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Signup.xaml",
+              "DocumentMoniker": "D:\\Studies\\3rd Semester\\Modules\\EC3404 - GUI Programming\\Project\\GUI\\Reps-Sheet (Desktop App)\\Reps-Sheet\\Reps-Sheet\\Signup.xaml",
+              "RelativeDocumentMoniker": "Reps-Sheet\\Signup.xaml",
+              "ToolTip": "D:\\Studies\\3rd Semester\\Modules\\EC3404 - GUI Programming\\Project\\GUI\\Reps-Sheet (Desktop App)\\Reps-Sheet\\Reps-Sheet\\Signup.xaml",
+              "RelativeToolTip": "Reps-Sheet\\Signup.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-15T17:27:54.959Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "D:\\Studies\\3rd Semester\\Modules\\EC3404 - GUI Programming\\Project\\GUI\\Reps-Sheet (Desktop App)\\Reps-Sheet\\Reps-Sheet\\App.xaml.cs",
+              "RelativeDocumentMoniker": "Reps-Sheet\\App.xaml.cs",
+              "ToolTip": "D:\\Studies\\3rd Semester\\Modules\\EC3404 - GUI Programming\\Project\\GUI\\Reps-Sheet (Desktop App)\\Reps-Sheet\\Reps-Sheet\\App.xaml.cs",
+              "RelativeToolTip": "Reps-Sheet\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T17:35:49.399Z"
+              "WhenOpened": "2025-01-15T16:54:17.904Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

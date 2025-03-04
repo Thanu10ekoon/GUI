@@ -53,21 +53,16 @@
                       Margin="-55 10 10 10">
                 <ListView.ItemContainerStyle>
                     <Style TargetType="ListViewItem">
-                        <!-- Default Style: White text, green background -->
                         <Setter Property="Foreground" Value="White"/>
                         <Setter Property="Opacity" Value="0.6"/>
                         <Setter Property="FontWeight" Value="Bold"/>
                         <Setter Property="HorizontalContentAlignment" Value="Center"/>
-
-                        <!-- Hover Style: Dark green text, same background -->
                         <Style.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter Property="Foreground" Value="Black"/>
                                 <Setter Property="Background" Value="Azure"/>
                                 <Setter Property="FontWeight" Value="Bold"/>
                             </Trigger>
-
-                            <!-- Selected Style: Green background, white text -->
                             <DataTrigger Binding="{Binding IsSelected, RelativeSource={RelativeSource Self}}" Value="True">
                                 <Setter Property="Foreground" Value="White"/>
                                 <Setter Property="Background" Value="Green"/>
@@ -91,8 +86,7 @@
                         FontWeight="Bold"
                         Foreground="Azure"
                         Background="#28a745"
-                        x:Name="Add_btn"
-                        />
+                        x:Name="Add_btn" />
                 <Button Content="🗘 Update"
                         Click="UpdateWorkout_Click"
                         Width="100"
@@ -106,6 +100,14 @@
                         Background="Red"
                         Foreground="Azure"
                         FontWeight="Bold"/>
+                <!-- Home Button -->
+                <Button Content="🏠 Home"
+                        Click="HomeButton_Click"
+                        Width="100"
+                        Margin="5"
+                        FontWeight="Bold"
+                        Foreground="Azure"
+                        Background="#28a745"/>
             </StackPanel>
 
             <StackPanel Margin="0,20,0,0">

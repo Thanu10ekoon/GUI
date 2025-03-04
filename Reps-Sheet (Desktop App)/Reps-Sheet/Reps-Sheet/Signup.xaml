@@ -77,7 +77,7 @@
                              FontSize="14"
                              Height="25"
                              Width="290"
-                             Margin="0,0,0,20"
+                             Margin="0,0,0,10"
                              BorderBrush="#32CD32"
                              BorderThickness="2"/>
 
@@ -87,10 +87,22 @@
                         Height="35"
                         Background="#28a745"
                         Padding="5"
-                        Margin="20"
+                        Margin="0,0,0,10"
                         Foreground="White"
                         FontWeight="Bold"
                         Click="SignBtnSignPgClick"/>
+                <Button x:Name="BackButton"
+                        Content="Back"
+                        Width="100"
+                        Height="35"
+                        Margin="0,0,0,5"
+                        Background="#28a745"
+                        Padding="5"
+                        Foreground="White"
+                        FontWeight="Bold"
+                        Click="BackButton_Click"/>
+
+                <!-- Back Button -->
             </StackPanel>
         </Grid>
     </Grid>

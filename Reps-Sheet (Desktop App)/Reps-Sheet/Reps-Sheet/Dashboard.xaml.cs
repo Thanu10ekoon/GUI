@@ -136,6 +136,13 @@ namespace Reps_Sheet
             ClearInputFields();
         }
 
+        private void HomeButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();  
+            mainWindow.Show();                        
+            this.Close();                             
+        }
+
         private void DeleteWorkout_Click(object sender, RoutedEventArgs e)
         {
             if (selectedWorkout == null)

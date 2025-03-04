@@ -73,5 +73,13 @@ namespace Reps_Sheet
             BackgroundVideo.Position = TimeSpan.Zero;
             BackgroundVideo.Play();
         }
+
+        // Back button click event to navigate to MainWindow
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();  // Create an instance of MainWindow
+            mainWindow.Show();                        // Show the MainWindow
+            this.Close();                             // Close the current window (Signup)
+        }
     }
 }

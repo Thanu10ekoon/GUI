@@ -41,8 +41,6 @@ namespace Reps_Sheet
             }
         }
 
-
-
         public void GrantAccess(int userId)
         {
             Dashboard dashboard = new Dashboard();
@@ -50,6 +48,11 @@ namespace Reps_Sheet
             dashboard.Show();
         }
 
-
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();  // Create an instance of MainWindow
+            mainWindow.Show();                        // Show the MainWindow
+            this.Close();                             // Close the current window (Login)
+        }
     }
 }
