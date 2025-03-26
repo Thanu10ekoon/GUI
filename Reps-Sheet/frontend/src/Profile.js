@@ -6,6 +6,9 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./Profile.css";
 
+// Get the base URL from the .env file
+const BASE_URL = process.env.REACT_APP_API_URL;
+
 function Profile() {
   const navigate = useNavigate();
   const userName = localStorage.getItem("userName");
@@ -32,7 +35,7 @@ function Profile() {
     }
 
     axios
-      .post("http://localhost:8082/getUserProfile", { username: userName })
+      .post(`${BASE_URL}/getUserProfile`, { username: userName })
       .then((res) => {
         if (typeof res.data === "string") {
           alert(res.data);
@@ -91,14 +94,14 @@ function Profile() {
     }
 
     axios
-      .post("http://localhost:8082/updateUserProfile", formData)
+      .post(`${BASE_URL}/updateUserProfile`, formData)
       .then((res) => {
         alert(res.data);
       })
       .catch((err) => console.error(err));
   };
 
-  // Preview if we have a base64 image
+  // Preview if we have a Base64 image
   const imagePreview = formData.profileImage ? (
     <img
       src={formData.profileImage}

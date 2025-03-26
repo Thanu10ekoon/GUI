@@ -3,6 +3,9 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./Record.css";
 
+// Get the base URL from .env file
+const BASE_URL = process.env.REACT_APP_API_URL;
+
 function Record() {
     const [workout, setWorkout] = useState("");
     const [reps, setReps] = useState("");
@@ -17,7 +20,7 @@ function Record() {
 
     const fetchWorkouts = useCallback((date) => {
         axios
-            .post("http://localhost:8082/getWorkouts", { name: userName, workoutDate: date })
+            .post(`${BASE_URL}/getWorkouts`, { name: userName, workoutDate: date })
             .then((res) => setLogs(res.data))
             .catch((err) => console.error("Error fetching workouts:", err));
     }, [userName]);
@@ -33,7 +36,7 @@ function Record() {
 
     const fetchProfileImage = () => {
         axios
-            .post("http://localhost:8082/getUserProfile", { username: userName })
+            .post(`${BASE_URL}/getUserProfile`, { username: userName })
             .then((res) => {
                 if (res.data && res.data.profile_image) {
                     setProfilePic(res.data.profile_image);
@@ -58,7 +61,7 @@ function Record() {
             handleUpdateWorkout(editingWorkout.id);
         } else {
             axios
-                .post("http://localhost:8082/addWorkout", {
+                .post(`${BASE_URL}/addWorkout`, {
                     name: userName,
                     workout,
                     reps,
@@ -75,7 +78,7 @@ function Record() {
 
     const handleDeleteWorkout = (id) => {
         axios
-            .post("http://localhost:8082/deleteWorkout", { id })
+            .post(`${BASE_URL}/deleteWorkout`, { id })
             .then(() => {
                 alert("Workout deleted successfully!");
                 fetchWorkouts(selectedDate);
@@ -92,7 +95,7 @@ function Record() {
 
     const handleUpdateWorkout = (id) => {
         axios
-            .post("http://localhost:8082/updateWorkout", {
+            .post(`${BASE_URL}/updateWorkout`, {
                 id,
                 workout,
                 reps,

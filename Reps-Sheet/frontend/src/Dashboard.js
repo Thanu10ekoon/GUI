@@ -16,6 +16,9 @@ import {
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
+// Define the base URL from the .env file
+const BASE_URL = process.env.REACT_APP_API_URL;
+
 const dayNames = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
 function Dashboard() {
@@ -41,7 +44,7 @@ function Dashboard() {
 
   const fetchProfileImage = () => {
     axios
-      .post("http://localhost:8082/getUserProfile", { username: userName })
+      .post(`${BASE_URL}/getUserProfile`, { username: userName })
       .then((res) => {
         if (res.data && res.data.profile_image) {
           setProfilePic(res.data.profile_image);
@@ -73,7 +76,7 @@ function Dashboard() {
       return;
     }
     axios
-      .post("http://localhost:8082/getWorkouts", {
+      .post(`${BASE_URL}/getWorkouts`, {
         name: userName,
         workoutDate: searchDate,
       })
@@ -84,7 +87,7 @@ function Dashboard() {
   // Fetch last week of data
   const fetchWeeklyData = () => {
     axios
-      .post("http://localhost:8082/getWeeklyWorkouts", { name: userName })
+      .post(`${BASE_URL}/getWeeklyWorkouts`, { name: userName })
       .then((res) => {
         if (Array.isArray(res.data)) setWeekData(res.data);
       })

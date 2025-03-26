@@ -4,6 +4,8 @@ import Validation from './SignupValidation';
 import axios from 'axios';
 import './Signup.css';
 
+const BASE_URL = process.env.REACT_APP_API_URL; // Use base URL from .env
+
 function Signup() {
   const [values, setValues] = useState({
     name: '',
@@ -19,9 +21,8 @@ function Signup() {
     const err = Validation(values);
     setErrors(err);
 
-    // Only post if no errors
     if (!err.name && !err.email && !err.password) {
-      axios.post('http://localhost:8082/signup', values)
+      axios.post(`${BASE_URL}/signup`, values)
         .then(() => {
           navigate('/GUI/login');
         })
@@ -29,9 +30,9 @@ function Signup() {
     }
   };
 
-  const handleINput = (event) => {
-    setValues((prev) => ({ 
-      ...prev, 
+  const handleInput = (event) => {
+    setValues((prev) => ({
+      ...prev,
       [event.target.name]: event.target.value
     }));
   };
@@ -46,12 +47,14 @@ function Signup() {
         muted
         src={`${process.env.PUBLIC_URL}/resources/sloop.mp4`}
       />
-      <div className>
-              <Link to = "/GUI/"><img
-                  src={`${process.env.PUBLIC_URL}/logo192.png`}
-                  alt="logo"
-                  className="snav-logo"
-                /></Link>
+      <div>
+        <Link to="/GUI/">
+          <img
+            src={`${process.env.PUBLIC_URL}/logo192.png`}
+            alt="logo"
+            className="snav-logo"
+          />
+        </Link>
       </div>
 
       <div className="signup-container">
@@ -64,7 +67,7 @@ function Signup() {
                 type="text"
                 name="name"
                 placeholder="ex:- Thanujaya"
-                onChange={handleINput}
+                onChange={handleInput}
               />
               {errors.name && (
                 <span className="error-text">{errors.name}</span>
@@ -77,7 +80,7 @@ function Signup() {
                 type="email"
                 name="email"
                 placeholder="ex:- eg245364@engug.ruh.ac.lk"
-                onChange={handleINput}
+                onChange={handleInput}
               />
               {errors.email && (
                 <span className="error-text">{errors.email}</span>
@@ -90,15 +93,16 @@ function Signup() {
                 type="password"
                 name="password"
                 placeholder="**********"
-                onChange={handleINput}
+                onChange={handleInput}
               />
               {errors.password && (
                 <span className="error-text">{errors.password}</span>
               )}
             </div>
 
-            
-            <p className='p1'><input type="checkbox" className="checkbox"/>Agree to T&C</p>
+            <p className='p1'>
+              <input type="checkbox" className="checkbox"/>Agree to T&C
+            </p>
             <button type="submit" className="btn-signup">Sign Up</button>
             
             <Link to="/GUI/login" className="btn-login">
